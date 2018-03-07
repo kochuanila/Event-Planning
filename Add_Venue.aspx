@@ -186,7 +186,7 @@
         </tr>
         <tr>
             <td class="auto-style4">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" Height="16px" Width="16px">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" Height="16px" Width="16px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                     <Columns>
                         <asp:TemplateField HeaderText="Venue_id">
                             <EditItemTemplate>
@@ -249,7 +249,7 @@
                                 <asp:TextBox ID="TextBox7" runat="server" Text='<%# Eval("Image") %>'></asp:TextBox>
                             </EditItemTemplate>
                             <ItemTemplate>
-                                <asp:Label ID="Label17" runat="server" Text='<%# Eval("Image") %>'></asp:Label>
+                                <asp:Image ID="Image1" runat="server" Height="57px" ImageUrl='<%# Eval("Image") %>' Width="78px" />
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:CommandField HeaderText="Updation" ShowEditButton="True" />

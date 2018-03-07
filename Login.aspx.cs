@@ -20,49 +20,43 @@ namespace Event_Planing
 
         protected void btnlogin_Click(object sender, EventArgs e)
         {
-            if (RadioButtonList1.SelectedItem.Text == "Admin")
+           
+            SqlCommand cmd = new SqlCommand("select * from Registration where username =@username and password=@password", con);
+
+            cmd.Parameters.AddWithValue("@username", txtuname.Text);
+
+            cmd.Parameters.AddWithValue("@password", txtpass.Text);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            if (dt.Rows.Count > 0)
             {
 
+                Response.Redirect("Reg_Update.aspx");
 
-                String sel = "select * from Login where Username='" + txtuname.Text + "' and Password='" + txtpass.Text + "'";
-                SqlCommand cmd = new SqlCommand(sel, con);
-                SqlDataAdapter ad = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                ad.Fill(dt);
 
-                if (dt.Rows.Count > 0)
-                {
-                    Session["Password"] = dt.Rows[0][0].ToString();
-                    Session["Username"] = dt.Rows[0][1].ToString();
-
-                    Response.Write("Login Sucessfull");
-                    Response.Redirect("View_Registration.aspx");
-
-                }
-                else
-                {
-                    Response.Write("Login Unsucessfull");
-                }
             }
-            else if (RadioButtonList1.SelectedItem.Text == "User")
+            else if (txtuname.Text == "admin" && txtpass.Text == "admin")
             {
-                String sel = "select username,password from Registration where UserName='" + txtuname.Text + "' and Password='" + txtpass.Text + "'";
-                SqlCommand cmd = new SqlCommand(sel, con);
-                SqlDataAdapter ad = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                ad.Fill(dt);
-                if (dt.Rows.Count > 0)
-                {
-                    Session["password"] = dt.Rows[0][0].ToString();
-                    Session["username"] = dt.Rows[0][1].ToString();
-
-                    Response.Redirect("Reg_Update.aspx");
-                }
-                else
-                {
-                    Response.Write("Login Unsucessfull");
-                }
+                Response.Redirect("View_Registration.aspx");
             }
+
+            else
+            {
+
+                txtuname.Text = "";
+                txtpass.Text = "";
+                Response.Write("<script language=javascript>alert('Invalid username and password')</script>");
+            }
+        }
+
+        protected void txtuname_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

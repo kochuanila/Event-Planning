@@ -2,38 +2,63 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
-            width: 467px;
-        }
+        width: 469px;
+    }
         .auto-style2 {
-            width: 192px;
-        }
+    }
+    .auto-style3 {
+        width: 162px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="nav-justified">
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style2" colspan="2">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td>
+            <td class="auto-style2" colspan="2">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style2" colspan="2">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style2" colspan="2">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style2" colspan="2">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style2" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="REGISTRATION"></asp:Label>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style2" colspan="2">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style3">
                 <asp:Label ID="Label2" runat="server" ForeColor="#0099FF" Text="ID"></asp:Label>
             </td>
             <td>
@@ -43,13 +68,13 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style3">
                 <asp:Label ID="Label3" runat="server" ForeColor="#0099FF" Text="Name"></asp:Label>
             </td>
             <td>
@@ -59,13 +84,13 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style3">
                 <asp:Label ID="Label4" runat="server" ForeColor="#0099FF" Text="Address"></asp:Label>
             </td>
             <td>
@@ -75,13 +100,13 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style3">
                 <asp:Label ID="Label5" runat="server" ForeColor="#0099FF" Text="Contact"></asp:Label>
             </td>
             <td>
@@ -91,13 +116,13 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style3">
                 <asp:Label ID="Label6" runat="server" ForeColor="#0099FF" Text="Email"></asp:Label>
             </td>
             <td>
@@ -107,13 +132,13 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style3">
                 <asp:Label ID="Label7" runat="server" ForeColor="#0099FF" Text="Username"></asp:Label>
             </td>
             <td>
@@ -123,13 +148,13 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style3">
                 <asp:Label ID="Label8" runat="server" ForeColor="#0099FF" Text="Password"></asp:Label>
             </td>
             <td>
@@ -139,13 +164,13 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style3">
                 <asp:Label ID="Label9" runat="server" ForeColor="#0099FF" Text="Con_password"></asp:Label>
             </td>
             <td>
@@ -155,13 +180,13 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>
                 <asp:Button ID="Button1" runat="server" ForeColor="#0099FF" OnClick="Button1_Click" Text="REGISTER" />
                 <asp:Button ID="btncancel" runat="server" ForeColor="#0099FF" Text="CANCEL" OnClick="btncancel_Click" />
@@ -170,13 +195,13 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>

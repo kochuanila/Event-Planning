@@ -86,7 +86,7 @@ SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 	</div>
 	<!-- //navigation -->
 	<!-- banner -->
-	<div class="banner">
+	<%--<div class="banner">--%>
 		<div class="container">
 			<script src="js/responsiveslides.min.js"></script>
 			<script>
@@ -110,7 +110,7 @@ SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 			</script>
 			<div  id="top" class="callbacks_container">
 				<ul class="rslides" id="slider3">
-					<li>
+					<%--<li>
 						<div class="banner-agileinfo">
 							<h3>WELCOME</h3>
 							<h4>Event planning & wedding coordination</h4> 
@@ -127,7 +127,7 @@ SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 							<h3>WELCOME</h3>
 							<h4>We help you plan your special day</h4>								
 						</div>
-					</li>
+					</li>--%>
 				</ul>
 			</div>
 		</div>

@@ -41,6 +41,18 @@ namespace Event_Planing
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            //getcon();
+            //string com = "select Email from Registration where Email ='" + txtemail.Text + "' ";
+            //SqlDataAdapter adpt = new SqlDataAdapter(com, con);
+            //DataTable dt = new DataTable();
+            //adpt.Fill(dt);
+            //if (dt.Rows.Count > 0)
+            //{
+            //    string message = " This User already Registered";
+            //    ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + message + "');", true);
+            //}
+
+
             getcon();
             String ins = "insert into Registration values('" + lblid.Text + "','" + txtname.Text + "','" + txtaddress.Text + "','" + txtcontact.Text + "','" + txtemail.Text + "','" + txtuname.Text + "','" + txtpassword.Text + "','" + txtconpass.Text + "')";
             SqlCommand cmd = new SqlCommand(ins, con);

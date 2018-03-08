@@ -61,6 +61,7 @@
     <Content Include="Add_Car_Details.aspx" />
     <Content Include="Add_Photographers.aspx" />
     <Content Include="Add_Venue.aspx" />
+    <Content Include="Book_Transportation.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Admin.Master" />
@@ -150,6 +151,13 @@
     </Compile>
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Book_Transportation.aspx.cs">
+      <DependentUpon>Book_Transportation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Book_Transportation.aspx.designer.cs">
+      <DependentUpon>Book_Transportation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

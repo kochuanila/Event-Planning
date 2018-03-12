@@ -33,7 +33,7 @@
         <tr>
             <td class="auto-style1">&nbsp;</td>
             <td>
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BorderWidth="2px" ForeColor="#0099FF">
                     <Columns>
                         <asp:TemplateField HeaderText="ID">
                             <ItemTemplate>
@@ -68,11 +68,6 @@
                         <asp:TemplateField HeaderText="Password">
                             <ItemTemplate>
                                 <asp:Label ID="Label7" runat="server" Text='<%# Eval("Password") %>'></asp:Label>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Con_password">
-                            <ItemTemplate>
-                                <asp:Label ID="Label8" runat="server" Text='<%# Eval("Con_password") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>

@@ -10,16 +10,16 @@
 namespace Event_Planing {
     
     
-    public partial class Reg_Update {
+    public partial class Feedback {
         
         /// <summary>
-        /// Label9 control.
+        /// Label6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
+        protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
         /// Label1 control.
@@ -31,13 +31,13 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// txtid control.
+        /// txtdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtid;
+        protected global::System.Web.UI.WebControls.TextBox txtdate;
         
         /// <summary>
         /// Label2 control.
@@ -67,13 +67,13 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// txtadd control.
+        /// txtemail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtadd;
+        protected global::System.Web.UI.WebControls.TextBox txtemail;
         
         /// <summary>
         /// Label4 control.
@@ -103,75 +103,21 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// txtemail control.
+        /// txtfeedback control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtemail;
+        protected global::System.Web.UI.WebControls.TextBox txtfeedback;
         
         /// <summary>
-        /// Label6 control.
+        /// btnsubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
-        
-        /// <summary>
-        /// txtuname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtuname;
-        
-        /// <summary>
-        /// Label7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
-        
-        /// <summary>
-        /// txtpass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpass;
-        
-        /// <summary>
-        /// btnselect control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnselect;
-        
-        /// <summary>
-        /// btnupdate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnupdate;
-        
-        /// <summary>
-        /// btnclear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnclear;
+        protected global::System.Web.UI.WebControls.Button btnsubmit;
     }
 }

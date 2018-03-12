@@ -54,7 +54,7 @@ namespace Event_Planing
 
 
             getcon();
-            String ins = "insert into Registration values('" + lblid.Text + "','" + txtname.Text + "','" + txtaddress.Text + "','" + txtcontact.Text + "','" + txtemail.Text + "','" + txtuname.Text + "','" + txtpassword.Text + "','" + txtconpass.Text + "')";
+            String ins = "insert into Registration values('" + lblid.Text + "','" + txtname.Text + "','" + txtaddress.Text + "','" + txtcontact.Text + "','" + txtemail.Text + "','" + txtuname.Text + "','" + txtpassword.Text + "')";
             SqlCommand cmd = new SqlCommand(ins, con);
             cmd.ExecuteNonQuery();
 

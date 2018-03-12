@@ -186,7 +186,7 @@
         </tr>
         <tr>
             <td class="auto-style4">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" Height="16px" Width="16px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" Height="16px" Width="16px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" BorderWidth="2px" ForeColor="#0099FF">
                     <Columns>
                         <asp:TemplateField HeaderText="Venue_id">
                             <EditItemTemplate>

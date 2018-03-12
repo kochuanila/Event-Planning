@@ -60,8 +60,14 @@
     <Content Include="Add_Bus_Details.aspx" />
     <Content Include="Add_Car_Details.aspx" />
     <Content Include="Add_Photographers.aspx" />
+    <Content Include="Add_Update_Status.aspx" />
     <Content Include="Add_Venue.aspx" />
+    <Content Include="Book_Event.aspx" />
+    <Content Include="Book_Photographer.aspx" />
     <Content Include="Book_Transportation.aspx" />
+    <Content Include="Cancel_Booking.aspx" />
+    <Content Include="Feedback.aspx" />
+    <Content Include="Feedback_View.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Admin.Master" />
@@ -111,7 +117,12 @@
     <Content Include="js\move-top.js" />
     <Content Include="js\responsiveslides.min.js" />
     <Content Include="js\smoothscroll.min.js" />
+    <Content Include="View_Booked_Photographers.aspx" />
+    <Content Include="View_BookEvent_Details.aspx" />
+    <Content Include="View_Cancel_Booking.aspx" />
+    <Content Include="View_Photographer.aspx" />
     <Content Include="View_Registration.aspx" />
+    <Content Include="View_Status.aspx" />
     <Content Include="View_Venue.aspx" />
     <Content Include="w3layouts-License.txt" />
     <Content Include="Web.config" />
@@ -138,6 +149,13 @@
     <Compile Include="Add_Photographers.aspx.designer.cs">
       <DependentUpon>Add_Photographers.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Add_Update_Status.aspx.cs">
+      <DependentUpon>Add_Update_Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Add_Update_Status.aspx.designer.cs">
+      <DependentUpon>Add_Update_Status.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Add_Venue.aspx.cs">
       <DependentUpon>Add_Venue.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -152,12 +170,47 @@
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="Book_Event.aspx.cs">
+      <DependentUpon>Book_Event.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Book_Event.aspx.designer.cs">
+      <DependentUpon>Book_Event.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Book_Photographer.aspx.cs">
+      <DependentUpon>Book_Photographer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Book_Photographer.aspx.designer.cs">
+      <DependentUpon>Book_Photographer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Book_Transportation.aspx.cs">
       <DependentUpon>Book_Transportation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Book_Transportation.aspx.designer.cs">
       <DependentUpon>Book_Transportation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cancel_Booking.aspx.cs">
+      <DependentUpon>Cancel_Booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cancel_Booking.aspx.designer.cs">
+      <DependentUpon>Cancel_Booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback_View.aspx.cs">
+      <DependentUpon>Feedback_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feedback_View.aspx.designer.cs">
+      <DependentUpon>Feedback_View.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -209,12 +262,47 @@
     <Compile Include="User.Master.designer.cs">
       <DependentUpon>User.Master</DependentUpon>
     </Compile>
+    <Compile Include="View_Booked_Photographers.aspx.cs">
+      <DependentUpon>View_Booked_Photographers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View_Booked_Photographers.aspx.designer.cs">
+      <DependentUpon>View_Booked_Photographers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View_BookEvent_Details.aspx.cs">
+      <DependentUpon>View_BookEvent_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View_BookEvent_Details.aspx.designer.cs">
+      <DependentUpon>View_BookEvent_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View_Cancel_Booking.aspx.cs">
+      <DependentUpon>View_Cancel_Booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View_Cancel_Booking.aspx.designer.cs">
+      <DependentUpon>View_Cancel_Booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View_Photographer.aspx.cs">
+      <DependentUpon>View_Photographer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View_Photographer.aspx.designer.cs">
+      <DependentUpon>View_Photographer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View_Registration.aspx.cs">
       <DependentUpon>View_Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View_Registration.aspx.designer.cs">
       <DependentUpon>View_Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View_Status.aspx.cs">
+      <DependentUpon>View_Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View_Status.aspx.designer.cs">
+      <DependentUpon>View_Status.aspx</DependentUpon>
     </Compile>
     <Compile Include="View_Venue.aspx.cs">
       <DependentUpon>View_Venue.aspx</DependentUpon>

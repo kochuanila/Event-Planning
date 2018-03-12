@@ -10,16 +10,7 @@
 namespace Event_Planing {
     
     
-    public partial class Reg_Update {
-        
-        /// <summary>
-        /// Label9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
+    public partial class Add_Update_Status {
         
         /// <summary>
         /// Label1 control.
@@ -31,13 +22,22 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// txtid control.
+        /// txtbookid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtid;
+        protected global::System.Web.UI.WebControls.TextBox txtbookid;
+        
+        /// <summary>
+        /// btnsearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnsearch;
         
         /// <summary>
         /// Label2 control.
@@ -49,13 +49,13 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// txtname control.
+        /// txtevplace control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtname;
+        protected global::System.Web.UI.WebControls.TextBox txtevplace;
         
         /// <summary>
         /// Label3 control.
@@ -67,13 +67,13 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// txtadd control.
+        /// txtguest control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtadd;
+        protected global::System.Web.UI.WebControls.TextBox txtguest;
         
         /// <summary>
         /// Label4 control.
@@ -85,13 +85,13 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// txtcontact control.
+        /// txtevdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtcontact;
+        protected global::System.Web.UI.WebControls.TextBox txtevdate;
         
         /// <summary>
         /// Label5 control.
@@ -103,13 +103,13 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// txtemail control.
+        /// txttotamunt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtemail;
+        protected global::System.Web.UI.WebControls.TextBox txttotamunt;
         
         /// <summary>
         /// Label6 control.
@@ -121,13 +121,13 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// txtuname control.
+        /// txtpaynow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtuname;
+        protected global::System.Web.UI.WebControls.TextBox txtpaynow;
         
         /// <summary>
         /// Label7 control.
@@ -139,22 +139,22 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// txtpass control.
+        /// DropDownList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpass;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
-        /// btnselect control.
+        /// btnaddstatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnselect;
+        protected global::System.Web.UI.WebControls.Button btnaddstatus;
         
         /// <summary>
         /// btnupdate control.

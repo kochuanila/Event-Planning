@@ -186,7 +186,7 @@
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" BorderWidth="2px" ForeColor="#0099FF">
                     <Columns>
                         <asp:TemplateField HeaderText="ID">
                             <EditItemTemplate>

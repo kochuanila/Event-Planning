@@ -144,7 +144,7 @@
         <tr>
             <td class="auto-style8">&nbsp;</td>
             <td class="auto-style5" colspan="2">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="380px" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="380px" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" BorderWidth="2px" ForeColor="#0099FF">
                     <Columns>
                         <asp:TemplateField HeaderText="Car Id">
                             <EditItemTemplate>

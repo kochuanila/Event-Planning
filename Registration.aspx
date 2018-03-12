@@ -41,7 +41,7 @@
         <tr>
             <td class="auto-style1">&nbsp;</td>
             <td class="auto-style2" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="REGISTRATION"></asp:Label>
+                <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="REGISTRATION" style="text-decoration: underline"></asp:Label>
             </td>
             <td>&nbsp;</td>
         </tr>

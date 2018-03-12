@@ -10,16 +10,7 @@
 namespace Event_Planing {
     
     
-    public partial class Reg_Update {
-        
-        /// <summary>
-        /// Label9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
+    public partial class Cancel_Booking {
         
         /// <summary>
         /// Label1 control.
@@ -49,13 +40,13 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// txtname control.
+        /// txtdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtname;
+        protected global::System.Web.UI.WebControls.TextBox txtdate;
         
         /// <summary>
         /// Label3 control.
@@ -67,111 +58,75 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// txtadd control.
+        /// txtBkngID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtadd;
+        protected global::System.Web.UI.WebControls.TextBox txtBkngID;
         
         /// <summary>
-        /// Label4 control.
+        /// btnviewdetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Button btnviewdetails;
         
         /// <summary>
-        /// txtcontact control.
+        /// lblbooingdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtcontact;
+        protected global::System.Web.UI.WebControls.Label lblbooingdate;
         
         /// <summary>
-        /// Label5 control.
+        /// lblevdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label lblevdate;
         
         /// <summary>
-        /// txtemail control.
+        /// lbltotamunt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtemail;
+        protected global::System.Web.UI.WebControls.Label lbltotamunt;
         
         /// <summary>
-        /// Label6 control.
+        /// lblpaynow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label lblpaynow;
         
         /// <summary>
-        /// txtuname control.
+        /// lblevplace control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtuname;
+        protected global::System.Web.UI.WebControls.Label lblevplace;
         
         /// <summary>
-        /// Label7 control.
+        /// btncancelbooking control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
-        
-        /// <summary>
-        /// txtpass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpass;
-        
-        /// <summary>
-        /// btnselect control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnselect;
-        
-        /// <summary>
-        /// btnupdate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnupdate;
-        
-        /// <summary>
-        /// btnclear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnclear;
+        protected global::System.Web.UI.WebControls.Button btncancelbooking;
     }
 }

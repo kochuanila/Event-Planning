@@ -6,7 +6,7 @@
         }
         .auto-style5 {
             height: 22px;
-            width: 213px;
+            width: 151px;
         }
         .auto-style6 {
             width: 410px;
@@ -16,14 +16,14 @@
             width: 410px;
         }
         .auto-style8 {
-            width: 629px;
+            width: 265px;
         }
         .auto-style9 {
             height: 22px;
-            width: 629px;
+            width: 265px;
         }
         .auto-style10 {
-            width: 213px;
+            width: 151px;
         }
     </style>
 </asp:Content>
@@ -55,7 +55,7 @@
                 <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="ID"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtid" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtid" CssClass="form-control" placeholder="ID" runat="server"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -71,7 +71,7 @@
                 <asp:Label ID="Label2" runat="server" ForeColor="#0099FF" Text="Name"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtname" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtname" CssClass="form-control" placeholder="Name" runat="server"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -87,7 +87,7 @@
                 <asp:Label ID="Label3" runat="server" ForeColor="#0099FF" Text="Address"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtadd" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtadd" CssClass="form-control" placeholder="Address" runat="server"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -103,7 +103,7 @@
                 <asp:Label ID="Label4" runat="server" ForeColor="#0099FF" Text="Contact"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtcontact" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtcontact" CssClass="form-control" placeholder="Contact" runat="server"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -119,7 +119,7 @@
                 <asp:Label ID="Label5" runat="server" ForeColor="#0099FF" Text="Email"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtemail" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtemail" CssClass="form-control" placeholder="Email" runat="server"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -135,7 +135,7 @@
                 <asp:Label ID="Label6" runat="server" ForeColor="#0099FF" Text="Username"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtuname" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                <asp:TextBox ID="txtuname" CssClass="form-control" placeholder="Username" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -151,7 +151,7 @@
                 <asp:Label ID="Label7" runat="server" ForeColor="#0099FF" Text="Password"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtpass" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtpass" CssClass="form-control" placeholder="Password" runat="server"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -164,11 +164,9 @@
         <tr>
             <td class="auto-style8">&nbsp;</td>
             <td class="auto-style10">
-                <asp:Label ID="Label8" runat="server" ForeColor="#0099FF" Text="Con_password"></asp:Label>
-            </td>
+                &nbsp;</td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtconpass" runat="server"></asp:TextBox>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>

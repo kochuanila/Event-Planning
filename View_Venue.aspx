@@ -16,7 +16,7 @@
         <tr>
             <td class="auto-style1">&nbsp;</td>
             <td>
-                <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="View Venue"></asp:Label>
+                <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="View Venue" style="text-decoration: underline"></asp:Label>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -28,7 +28,7 @@
         <tr>
             <td class="auto-style1">&nbsp;</td>
             <td>
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" BorderWidth="2px" ForeColor="#0099FF">
                     <Columns>
                         <asp:TemplateField HeaderText="ID">
                             <ItemTemplate>

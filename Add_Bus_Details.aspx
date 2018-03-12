@@ -153,7 +153,7 @@
         <tr>
             <td class="auto-style13">&nbsp;</td>
             <td class="auto-style3" colspan="2" rowspan="2">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="547px" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" Height="149px">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="547px" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" Height="149px" BorderWidth="2px" ForeColor="#0099FF">
                     <Columns>
                         <asp:TemplateField HeaderText="BUS ID">
                             <EditItemTemplate>

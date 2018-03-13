@@ -32,7 +32,7 @@ namespace Event_Planing
         {
 
             getcon();
-            string str = "select Count(Book_ID) from Book_Events";
+            string str = "select Count(Book_ID) from Book_Event";
             SqlCommand cmd = new SqlCommand(str, con);
             int i = Convert.ToInt32(cmd.ExecuteScalar());
             con.Close();
@@ -45,9 +45,10 @@ namespace Event_Planing
 
         protected void btneuiptcost_Click(object sender, EventArgs e)
         {
-
+            if( rblequi.SelectedItem.Text=="DJ & Stage")
+            {
                 getcon();
-                String sel1 = "select Cost from Equipment where Equipments='" + checkequi.SelectedValue.ToString() + "'";
+                String sel1 = "select Cost from Equipment where Equipments='" + rblequi.SelectedItem.Text + "'";
                 SqlCommand cmd1 = new SqlCommand(sel1, con);
                 SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
                 DataTable dt1 = new DataTable();
@@ -57,124 +58,166 @@ namespace Event_Planing
                     lblcostequi.Text = dt1.Rows[0][0].ToString();
 
                 }
+            }
+            else if (rblequi.SelectedItem.Text == "DJ")
+            {
+                getcon();
+                String sel1 = "select Cost from Equipment where Equipments='"+rblequi.SelectedItem.Text+"'";
+                SqlCommand cmd1 = new SqlCommand(sel1, con);
+                SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
+                DataTable dt1 = new DataTable();
+                sd1.Fill(dt1);
+                if (dt1.Rows.Count > 0)
+                {
+                    lblcostequi.Text = dt1.Rows[0][0].ToString();
+
+                }
+            }
+            else if (rblequi.SelectedItem.Text == "Stage")
+            {
+                getcon();
+                String sel1 = "select Cost from Equipment where Equipments='" + rblequi.SelectedItem.Text + "'";
+                SqlCommand cmd1 = new SqlCommand(sel1, con);
+                SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
+                DataTable dt1 = new DataTable();
+                sd1.Fill(dt1);
+                if (dt1.Rows.Count > 0)
+                {
+                    lblcostequi.Text = dt1.Rows[0][0].ToString();
+
+                }
+            }
+            else
+            {
+                getcon();
+                String sel1 = "select Cost from Equipment where Equipments='" + rblequi.SelectedItem.Text + "'";
+                SqlCommand cmd1 = new SqlCommand(sel1, con);
+                SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
+                DataTable dt1 = new DataTable();
+                sd1.Fill(dt1);
+                if (dt1.Rows.Count > 0)
+                {
+                    lblcostequi.Text = dt1.Rows[0][0].ToString();
+
+                }
+            }    
         }
 
         protected void btndectncost_Click(object sender, EventArgs e)
         {
-            getcon();
-            String sel1 = "select Cost from Decoration where Decoration='" + checkdectn.SelectedValue.ToString() + "'";
-            SqlCommand cmd1 = new SqlCommand(sel1, con);
-            SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
-            DataTable dt1 = new DataTable();
-            sd1.Fill(dt1);
-            if (dt1.Rows.Count > 0)
-            {
-                lbldectncost.Text = dt1.Rows[0][0].ToString();
 
+            if (rbldectn.SelectedItem.Text == "Lightings")
+            {
+                getcon();
+                String sel1 = "select Cost from Decoration where Decoration='" + rbldectn.SelectedValue.ToString() + "'";
+                SqlCommand cmd1 = new SqlCommand(sel1, con);
+                SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
+                DataTable dt1 = new DataTable();
+                sd1.Fill(dt1);
+                if (dt1.Rows.Count > 0)
+                {
+                    lbldectncost.Text = dt1.Rows[0][0].ToString();
+
+                }
+                
+            }
+            else if (rbldectn.SelectedItem.Text == "Flowers")
+            {
+                getcon();
+                String sel1 = "select Cost from Decoration where Decoration='" + rbldectn.SelectedValue.ToString() + "'";
+                SqlCommand cmd1 = new SqlCommand(sel1, con);
+                SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
+                DataTable dt1 = new DataTable();
+                sd1.Fill(dt1);
+                if (dt1.Rows.Count > 0)
+                {
+                    lbldectncost.Text = dt1.Rows[0][0].ToString();
+
+                }
+            }
+            else if (rbldectn.SelectedItem.Text == "Lights & Flowers")
+            {
+                getcon();
+                String sel1 = "select Cost from Decoration where Decoration='" + rbldectn.SelectedValue.ToString() + "'";
+                SqlCommand cmd1 = new SqlCommand(sel1, con);
+                SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
+                DataTable dt1 = new DataTable();
+                sd1.Fill(dt1);
+                if (dt1.Rows.Count > 0)
+                {
+                    lbldectncost.Text = dt1.Rows[0][0].ToString();
+
+                }
+            }
+            else
+            {
+                getcon();
+                String sel1 = "select Cost from Decoration where Decoration='" + rbldectn.SelectedValue.ToString() + "'";
+                SqlCommand cmd1 = new SqlCommand(sel1, con);
+                SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
+                DataTable dt1 = new DataTable();
+                sd1.Fill(dt1);
+                if (dt1.Rows.Count > 0)
+                {
+                    lbldectncost.Text = dt1.Rows[0][0].ToString();
+
+                }
             }
         }
 
         protected void btnfoodcost_Click(object sender, EventArgs e)
         {
-            if (checkfood.SelectedItem.Text == "Breakfast")
+            if (rblfood.SelectedItem.Text == "Veg")
             {
-                if(RadioButtonList1.SelectedItem.Text=="Veg")
+                getcon();
+                String sel1 = "select Cost from Foods where Food_type='" + rblfood.SelectedValue.ToString() + "'";
+                SqlCommand cmd1 = new SqlCommand(sel1, con);
+                SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
+                DataTable dt1 = new DataTable();
+                sd1.Fill(dt1);
+                if (dt1.Rows.Count > 0)
                 {
-                    getcon();
-                    String sel1 = "select Cost from Food where Food_type='" + RadioButtonList1.SelectedValue.ToString() + "'";
-                    SqlCommand cmd1 = new SqlCommand(sel1, con);
-                    SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
-                    DataTable dt1 = new DataTable();
-                    sd1.Fill(dt1);
-                    if (dt1.Rows.Count > 0)
-                    {
-                        lblfoodcost.Text = dt1.Rows[0][0].ToString();
 
-                    }
+                    lblcost.Text = dt1.Rows[0][0].ToString();
+
                 }
-                else if (RadioButtonList1.SelectedItem.Text == "Non Veg")
+                
+            }
+            else if (rblfood.SelectedItem.Text == "NonVeg")
+            {                
+                getcon();
+                String sel1 = "select Cost from Foods where Food_type='" + rblfood.SelectedValue.ToString() + "'";
+                SqlCommand cmd1 = new SqlCommand(sel1, con);
+                SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
+                DataTable dt1 = new DataTable();
+                sd1.Fill(dt1);
+                if (dt1.Rows.Count > 0)
                 {
-                    getcon();
-                    String sel1 = "select Cost from Food where Food_type='" + RadioButtonList1.SelectedValue.ToString() + "'";
-                    SqlCommand cmd1 = new SqlCommand(sel1, con);
-                    SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
-                    DataTable dt1 = new DataTable();
-                    sd1.Fill(dt1);
-                    if (dt1.Rows.Count > 0)
-                    {
-                        lblfoodcost.Text = dt1.Rows[0][0].ToString();
 
-                    }
+                    lblcost.Text = dt1.Rows[0][0].ToString();
+
                 }
             }
-            else if (checkfood.SelectedItem.Text == "Lunch")
-            {
-                if (RadioButtonList1.SelectedItem.Text == "Veg")
+            else if (rblfood.SelectedItem.Text == "Veg & Non Veg")
+            {                
+                getcon();
+                String sel1 = "select Cost from Foods where Food_type='" + rblfood.SelectedValue.ToString() + "'";
+                SqlCommand cmd1 = new SqlCommand(sel1, con);
+                SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
+                DataTable dt1 = new DataTable();
+                sd1.Fill(dt1);
+                if (dt1.Rows.Count > 0)
                 {
-                    getcon();
-                    String sel1 = "select Cost from Food where Food='" + checkequi.SelectedValue.ToString() + "'";
-                    SqlCommand cmd1 = new SqlCommand(sel1, con);
-                    SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
-                    DataTable dt1 = new DataTable();
-                    sd1.Fill(dt1);
-                    if (dt1.Rows.Count > 0)
-                    {
-                        lblfoodcost.Text = dt1.Rows[0][0].ToString();
 
-                    }
-                }
-                else if (RadioButtonList1.SelectedItem.Text == "Non Veg")
-                {
-                    getcon();
-                    String sel1 = "select Cost from Food where Food='" + checkequi.SelectedValue.ToString() + "'";
-                    SqlCommand cmd1 = new SqlCommand(sel1, con);
-                    SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
-                    DataTable dt1 = new DataTable();
-                    sd1.Fill(dt1);
-                    if (dt1.Rows.Count > 0)
-                    {
-                        lblfoodcost.Text = dt1.Rows[0][0].ToString();
+                    lblcost.Text = dt1.Rows[0][0].ToString();
 
-                    }
                 }
             }
-            else if (checkfood.SelectedItem.Text == "Dinner")
-            {
-                if (RadioButtonList1.SelectedItem.Text == "Veg")
-                {
-                    getcon();
-                    String sel1 = "select Cost from Food where Food='" + checkequi.SelectedValue.ToString() + "'";
-                    SqlCommand cmd1 = new SqlCommand(sel1, con);
-                    SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
-                    DataTable dt1 = new DataTable();
-                    sd1.Fill(dt1);
-                    if (dt1.Rows.Count > 0)
-                    {
-                        lblfoodcost.Text = dt1.Rows[0][0].ToString();
-
-                    }
-                }
-                else if (RadioButtonList1.SelectedItem.Text == "Non Veg")
-                {
-                    getcon();
-                    String sel1 = "select Cost from Food where Food='" + checkequi.SelectedValue.ToString() + "'";
-                    SqlCommand cmd1 = new SqlCommand(sel1, con);
-                    SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
-                    DataTable dt1 = new DataTable();
-                    sd1.Fill(dt1);
-                    if (dt1.Rows.Count > 0)
-                    {
-                        lblfoodcost.Text = dt1.Rows[0][0].ToString();
-
-                    }
-                }
-            }
+            
         }
 
         protected void btncalculate_Click(object sender, EventArgs e)
         {
-            
-
             int a, b, c, d, f;
             a = Convert.ToInt32(lblcostequi.Text);
             b = Convert.ToInt32(lbldectncost.Text);
@@ -188,7 +231,7 @@ namespace Event_Planing
         protected void btnbook_Click(object sender, EventArgs e)
         {
             getcon();
-            String ins = "insert into Book_events values('" + txtBkngID.Text + "','" + txtbookdate.Text + "','" + DropDownList1.SelectedValue.ToString() + "','" + txtevplace.Text + "','" + txtnoguest.Text + "','" + txtdate.Text + "','" + checkequi.SelectedValue.ToString() + "','" + checkdectn.SelectedValue.ToString() + "','" + checkfood.SelectedValue.ToString() + "','" + RadioButtonList1.SelectedItem.ToString() + "','" + txttotamunt.Text + "','" + txtpaynow.Text + "')";
+            String ins = "insert into Book_Event values('" + txtBkngID.Text + "','" + txtbookdate.Text + "','" + DropDownList1.SelectedValue.ToString() + "','" + DropDownList3.SelectedValue.ToString() + "','" + txtnoguest.Text + "','" + txtdate.Text + "','" + DropDownList2.SelectedValue.ToString() + "','" + rblequi.SelectedValue.ToString() + "','" + rbldectn.SelectedValue.ToString() + "','" + rblfood.SelectedItem.ToString() + "','" + txttotamunt.Text + "','" + txtpaynow.Text + "')";
             SqlCommand cmd = new SqlCommand(ins, con);
             cmd.ExecuteNonQuery();
             con.Close();
@@ -197,11 +240,70 @@ namespace Event_Planing
 
             txtBkngID.Text = "";
             txtbookdate.Text = "";
-            txtevplace.Text = "";
             txtnoguest.Text = "";
             txtdate.Text = "";
             txttotamunt.Text = "";
             txtpaynow.Text = "";
+            lblcost.Text = "";
+            lblcostequi.Text = "";
+            lbldectncost.Text = "";
+            lblfoodcost.Text = "";
+        }
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (rblfood.SelectedItem.Text == "Veg")
+            {
+                int a, b, c;
+                a = Convert.ToInt32(lblcost.Text);
+                b = Convert.ToInt32(txtnoguest.Text);
+                c = a * b;
+                lblfoodcost.Text = c.ToString();
+            }
+            else if (rblfood.SelectedItem.Text == " NonVeg")
+            {
+                int a, b, c;
+                a = Convert.ToInt32(lblcost.Text);
+                b = Convert.ToInt32(txtnoguest.Text);
+                c = a * b;
+                lblfoodcost.Text = c.ToString();
+            }
+            else 
+            {
+                int a, b, c;
+                a = Convert.ToInt32(lblcost.Text);
+                b = Convert.ToInt32(txtnoguest.Text);
+                c = a * b;
+                lblfoodcost.Text = c.ToString();
+            }
+        }
+
+        protected void btnsearch_Click(object sender, EventArgs e)
+        {
+            getcon();
+            string str = "select Image from Add_Venue where Name= '" + DropDownList3.SelectedValue.ToString() + "'";
+            SqlCommand cmd = new SqlCommand(str, con);
+            SqlDataAdapter adr = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adr.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+            }
+        }
+
+        protected void DropDownList3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void txtnoguest_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+        protected void rbldectn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

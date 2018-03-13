@@ -67,13 +67,13 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.TextBox txtbookdate;
         
         /// <summary>
-        /// checkequi control.
+        /// rblequi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList checkequi;
+        protected global::System.Web.UI.WebControls.RadioButtonList rblequi;
         
         /// <summary>
         /// Label2 control.
@@ -121,13 +121,22 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// txtevplace control.
+        /// DropDownList3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtevplace;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+        
+        /// <summary>
+        /// btnsearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnsearch;
         
         /// <summary>
         /// Label10 control.
@@ -157,13 +166,13 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.TextBox txtnoguest;
         
         /// <summary>
-        /// checkdectn control.
+        /// rbldectn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList checkdectn;
+        protected global::System.Web.UI.WebControls.RadioButtonList rbldectn;
         
         /// <summary>
         /// Label5 control.
@@ -202,6 +211,24 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Label lbldectncost;
         
         /// <summary>
+        /// Label20 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label20;
+        
+        /// <summary>
+        /// DropDownList2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        
+        /// <summary>
         /// Label8 control.
         /// </summary>
         /// <remarks>
@@ -211,31 +238,13 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// checkfood control.
+        /// rblfood control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList checkfood;
-        
-        /// <summary>
-        /// btncalculate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btncalculate;
-        
-        /// <summary>
-        /// RadioButtonList1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        protected global::System.Web.UI.WebControls.RadioButtonList rblfood;
         
         /// <summary>
         /// btnfoodcost control.
@@ -247,6 +256,24 @@ namespace Event_Planing {
         protected global::System.Web.UI.WebControls.Button btnfoodcost;
         
         /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// lblcost control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblcost;
+        
+        /// <summary>
         /// lblfoodcost control.
         /// </summary>
         /// <remarks>
@@ -254,6 +281,33 @@ namespace Event_Planing {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblfoodcost;
+        
+        /// <summary>
+        /// Label21 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label21;
+        
+        /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
+        
+        /// <summary>
+        /// btncalculate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btncalculate;
         
         /// <summary>
         /// Label15 control.

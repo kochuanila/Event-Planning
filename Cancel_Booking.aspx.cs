@@ -12,6 +12,7 @@ namespace Event_Planing
     public partial class Cancel_Booking : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection();
+        SqlCommand cmd;
         String ID = "";
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -39,7 +40,7 @@ namespace Event_Planing
         protected void btnviewdetails_Click(object sender, EventArgs e)
         {
             getcon();
-            String sel = "select Booking_date,Date,Total_amount,Amount_Pay,Event_place from Book_Events";
+            String sel = "select Booking_date,Date,Total_amount,Amount_Pay,Event_place from Book_Event where Book_ID='"+txtBkngID.Text+"'";
             SqlCommand cmd = new SqlCommand(sel, con);
             SqlDataAdapter sd1 = new SqlDataAdapter(cmd);
             DataTable dt1 = new DataTable();
@@ -58,27 +59,28 @@ namespace Event_Planing
         protected void btncancelbooking_Click(object sender, EventArgs e)
         {
             getcon();
-            String del = "delete from Book_Events where Book_ID='"+txtBkngID+"'";
-            SqlCommand cmd = new SqlCommand(del, con);
+            String del = "delete from Book_Event where Book_ID='" + txtBkngID + "'";
+            cmd = new SqlCommand(del, con);
             cmd.ExecuteNonQuery();
+            Response.Write("<script>alert('Your Booking is Canceled! :-)')</script>");
             String ins = "insert into Cancel_Bookings values('" + txtid.Text + "','" + txtdate.Text + "','" + txtBkngID.Text + "')";
-            SqlCommand cmd1 = new SqlCommand(ins, con);
-            cmd1.ExecuteNonQuery();
-            int i = cmd.ExecuteNonQuery();
-            if (i != 0)
-            {
+            cmd = new SqlCommand(ins, con);
+            cmd.ExecuteNonQuery();
+            //int i = cmd.ExecuteNonQuery();
+            //if (i != 0)
+            //{
 
-                Response.Write("<script>alert('Your Booking is Canceled! :-)')</script>");
+            //    Response.Write("<script>alert('Your Booking is Canceled! :-)')</script>");
 
-            }
-            con.Close();
+            //}
+            //con.Close();
             lblbooingdate.Text = "";
             lblevdate.Text = "";
             lbltotamunt.Text = "";
             lblpaynow.Text = "";
             lblevplace.Text = "";
-            txtBkngID.Text="";
-            txtdate.Text="";
+            txtBkngID.Text = "";
+            txtdate.Text = "";
             txtid.Text = "";
 
         }

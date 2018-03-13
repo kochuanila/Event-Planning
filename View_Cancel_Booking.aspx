@@ -42,14 +42,14 @@
             <td>
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BorderWidth="2px" ForeColor="#0099FF">
                     <Columns>
-                        <asp:TemplateField HeaderText="Date">
-                            <ItemTemplate>
-                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("Date") %>'></asp:Label>
-                            </ItemTemplate>
-                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Booking ID">
                             <ItemTemplate>
-                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("Booking_ID") %>'></asp:Label>
+                                <asp:Label ID="Label4" runat="server" Text='<%# Eval("Booking_ID") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Date &amp; Time">
+                            <ItemTemplate>
+                                <asp:Label ID="Label5" runat="server" Text='<%# Eval("Date") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>

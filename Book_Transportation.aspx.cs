@@ -15,13 +15,14 @@ namespace Event_Planing
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            txtevdate.Text = DateTime.Now.ToString();
+           
             if(!IsPostBack)
             {
                 Panel1.Visible = false;
                 Panel2.Visible = false;
 
             }
+            txtevdate.Text = DateTime.Now.ToString();
         }
         public void getcon()
         {

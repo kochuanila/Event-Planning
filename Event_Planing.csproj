@@ -66,6 +66,7 @@
     <Content Include="Book_Photographer.aspx" />
     <Content Include="Book_Transportation.aspx" />
     <Content Include="Cancel_Booking.aspx" />
+    <Content Include="Event_Booking.aspx" />
     <Content Include="Feedback.aspx" />
     <Content Include="Feedback_View.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -197,6 +198,13 @@
     </Compile>
     <Compile Include="Cancel_Booking.aspx.designer.cs">
       <DependentUpon>Cancel_Booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Event_Booking.aspx.cs">
+      <DependentUpon>Event_Booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Event_Booking.aspx.designer.cs">
+      <DependentUpon>Event_Booking.aspx</DependentUpon>
     </Compile>
     <Compile Include="Feedback.aspx.cs">
       <DependentUpon>Feedback.aspx</DependentUpon>

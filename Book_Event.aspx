@@ -38,6 +38,28 @@
             height: 24px;
             width: 67px;
         }
+        .auto-style12 {
+            height: 21px;
+            width: 67px;
+        }
+        .auto-style13 {
+            width: 229px;
+            height: 21px;
+        }
+        .auto-style14 {
+            height: 21px;
+        }
+        .auto-style15 {
+            width: 67px;
+            height: 62px;
+        }
+        .auto-style16 {
+            width: 229px;
+            height: 62px;
+        }
+        .auto-style17 {
+            height: 62px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -68,34 +90,34 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style9">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style12">&nbsp;</td>
+            <td class="auto-style13">&nbsp;</td>
+            <td class="auto-style14">&nbsp;</td>
+            <td class="auto-style14">&nbsp;</td>
+            <td class="auto-style14">&nbsp;</td>
+            <td class="auto-style14">&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style9">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style12"></td>
+            <td class="auto-style13"></td>
+            <td class="auto-style14"></td>
+            <td class="auto-style14"></td>
+            <td class="auto-style14"></td>
+            <td class="auto-style14"></td>
         </tr>
         <tr>
-            <td class="auto-style9">&nbsp;</td>
-            <td class="auto-style4">
+            <td class="auto-style11"></td>
+            <td class="auto-style8">
                 <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="Booking ID"></asp:Label>
             </td>
-            <td>
+            <td class="auto-style7">
                 <asp:TextBox ID="txtBkngID" runat="server"></asp:TextBox>
             </td>
-            <td>
+            <td class="auto-style7">
                 <asp:Label ID="Label6" runat="server" ForeColor="#0099FF" style="font-weight: 700; text-decoration: underline;" Text="Equipments"></asp:Label>
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7"></td>
+            <td class="auto-style7"></td>
         </tr>
         <tr>
             <td class="auto-style9">&nbsp;</td>
@@ -167,11 +189,11 @@
                 <asp:Label ID="Label3" runat="server" ForeColor="#0099FF" Text="Event Place"></asp:Label>
             </td>
             <td>
-                <asp:DropDownList ID="DropDownList3" runat="server" OnSelectedIndexChanged="DropDownList3_SelectedIndexChanged">
+                <asp:DropDownList ID="DropDownList3" runat="server">
                     <asp:ListItem>--Select--</asp:ListItem>
                     <asp:ListItem>AB auditorium</asp:ListItem>
                     <asp:ListItem>XY Hall</asp:ListItem>
-                    <asp:ListItem>MN auditoriam</asp:ListItem>
+                    <asp:ListItem>MN auditorium</asp:ListItem>
                 </asp:DropDownList>
                 <asp:Button ID="btnsearch" runat="server" OnClick="btnsearch_Click" Text="Search" />
             </td>
@@ -198,7 +220,7 @@
                 <asp:TextBox ID="txtnoguest" runat="server" OnTextChanged="txtnoguest_TextChanged"></asp:TextBox>
             </td>
             <td class="auto-style2">
-                <asp:RadioButtonList ID="rbldectn" runat="server" ForeColor="#0099FF" OnSelectedIndexChanged="rbldectn_SelectedIndexChanged" RepeatDirection="Horizontal">
+                <asp:RadioButtonList ID="rbldectn" runat="server" ForeColor="#0099FF" OnSelectedIndexChanged="rbldectn_SelectedIndexChanged" RepeatDirection="Horizontal" Height="44px" Width="258px">
                     <asp:ListItem>Lightings</asp:ListItem>
                     <asp:ListItem>Flowers</asp:ListItem>
                     <asp:ListItem>Lights &amp; Flowers</asp:ListItem>

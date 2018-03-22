@@ -199,6 +199,7 @@
     <Compile Include="Cancel_Booking.aspx.designer.cs">
       <DependentUpon>Cancel_Booking.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DBManager.cs" />
     <Compile Include="Event_Booking.aspx.cs">
       <DependentUpon>Event_Booking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

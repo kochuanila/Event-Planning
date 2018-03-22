@@ -13,16 +13,33 @@ namespace Event_Planing
     {
         SqlConnection con = new SqlConnection();
         String ID = "";
+        DBManager db = new DBManager();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 GenerateAutoID();
+                getcon();
+                DataTable dt=new DataTable();
+                checkfood.DataSource = dt;
+                string str = "select Id,[food]=Food+Food_Type from Food";
+                SqlCommand cmd = new SqlCommand(str, con);
+                SqlDataAdapter adr = new SqlDataAdapter(cmd);
+                adr.Fill(dt);
+                dt = db.GetDataTableInline(str);
+                if (dt.Rows.Count > 0)
+                {
+                    checkfood.DataSource = dt;
+                    checkfood.DataValueField = "Id";
+                    checkfood.DataTextField = "food";
+                    checkfood.DataBind();
+                }
             }
             txtbookdate.Text = DateTime.Now.ToString();
         }
         public void getcon()
         {
+            
             con.ConnectionString = @"Data Source=LAPTOP-4H9G3A49\SQLEXPRESS;Initial Catalog=anu;Integrated Security=True";
             con.Open();
 
@@ -30,23 +47,27 @@ namespace Event_Planing
         private void GenerateAutoID()
         {
 
-            getcon();
+            //getcon();
+            DBManager db = new DBManager();
             string str = "select Count(Book_ID) from Book_Event";
-            SqlCommand cmd = new SqlCommand(str, con);
-            int i = Convert.ToInt32(cmd.ExecuteScalar());
-            con.Close();
+            //SqlCommand cmd = new SqlCommand(str, con);
+            int i = Convert.ToInt32(db.ExecScaler(str));
+            //con.Close();
             i++;
             txtBkngID.Text = ID + i.ToString();
         }
 
         protected void btnsearch_Click(object sender, EventArgs e)
         {
-            getcon();
-            string str = "select Image from Add_Venue where Name= '" + DropDownList2.SelectedValue.ToString() + "'";
-            SqlCommand cmd = new SqlCommand(str, con);
-            SqlDataAdapter adr = new SqlDataAdapter(cmd);
+            //getcon();
+            DBManager db = new DBManager();
             DataTable dt = new DataTable();
-            adr.Fill(dt);
+            string str = "select Image from Add_Venue where Name= '" + DropDownList2.SelectedValue.ToString() + "'";
+           //SqlCommand cmd = new SqlCommand(str, con);
+           //SqlDataAdapter adr = new SqlDataAdapter(cmd);
+           //DataTable dt = new DataTable();
+            //adr.Fill(dt);
+            dt = db.GetDataTableInline(str);
             if (dt.Rows.Count > 0)
             {
                 GridView1.DataSource = dt;
@@ -73,21 +94,66 @@ namespace Event_Planing
 
         protected void btnequicost_Click(object sender, EventArgs e)
         {
-            Double cst=0.0;
+
+            Double cst = 0.0;
             foreach (ListItem lst in checkequi.Items)
             {
                 if (lst.Selected == true)
                 {
                     getcon();
-                    string qry="select Cost from Equipment where Id=" +lst.Value.ToString();
+                    string qry = "select Cost from Equipment where Id=" + lst.Value.ToString();
                     SqlCommand cmd = new SqlCommand(qry, con);
                     SqlDataAdapter adr = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     adr.Fill(dt);
                     cst = cst + Convert.ToDouble(dt.Rows[0][0]);
-                    
-                   
-                        
+                    con.Close();
+                    lblequicost.Text = cst.ToString();
+
+                }
+            }
+        }
+
+        protected void btndectncost_Click(object sender, EventArgs e)
+        {
+            Double cst = 0.0;
+            foreach (ListItem lst in checkdectn.Items)
+            {
+                if (lst.Selected == true)
+                {
+                    getcon();
+                    string qry = "select Cost from Decoration where ID=" + lst.Value.ToString();
+                    SqlCommand cmd = new SqlCommand(qry, con);
+                    SqlDataAdapter adr = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adr.Fill(dt);
+                    cst = cst + Convert.ToDouble(dt.Rows[0][0]);
+                    con.Close();
+                    lbldectncost.Text = cst.ToString();
+
+                }
+            }
+        }
+
+        protected void btnfoodcost_Click(object sender, EventArgs e)
+        {
+            Double cst = 0.0;
+            foreach (ListItem lst in checkfood.Items)
+            {
+                if (lst.Selected == true)
+                {
+                    getcon();
+                    string qry = "select Cost from Food where ID=" + lst.Value.ToString();
+                    SqlCommand cmd = new SqlCommand(qry, con);
+                    SqlDataAdapter adr = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adr.Fill(dt);
+                    cst = cst + Convert.ToDouble(dt.Rows[0][0]);
+                    con.Close();
+                    int a;
+                    a = Convert.ToInt32(txtnoguest.Text);
+                    lblfoodcost.Text = cst.ToString();
+
                 }
             }
         }

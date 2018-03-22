@@ -149,8 +149,8 @@
             </td>
             <td>
                 <asp:CheckBoxList ID="checkdectn" runat="server" ForeColor="#0099FF" RepeatDirection="Horizontal">
-                    <asp:ListItem>Lightings</asp:ListItem>
-                    <asp:ListItem>Flowers</asp:ListItem>
+                    <asp:ListItem Value="1">Lightings</asp:ListItem>
+                    <asp:ListItem Value="2">Flowers</asp:ListItem>
                 </asp:CheckBoxList>
             </td>
             <td>&nbsp;</td>
@@ -181,7 +181,7 @@
                 <asp:Button ID="btnsearch" runat="server" OnClick="btnsearch_Click" Text="Search" />
             </td>
             <td>
-                <asp:Button ID="btndectncost" runat="server" ForeColor="#0099FF" Text="Cost" Height="24px" />
+                <asp:Button ID="btndectncost" runat="server" ForeColor="#0099FF" Text="Cost" Height="24px" OnClick="btndectncost_Click" />
             </td>
             <td>
                 &nbsp;</td>
@@ -215,18 +215,14 @@
                 <asp:Label ID="Label10" runat="server" ForeColor="#0099FF" style="text-decoration: underline" Text="Food"></asp:Label>
                 <br />
                 <br />
-                <asp:CheckBoxList ID="checkfood" runat="server" ForeColor="#0099FF" RepeatDirection="Horizontal" OnSelectedIndexChanged="checkfood_SelectedIndexChanged">
+                <asp:CheckBoxList ID="checkfood" runat="server" ForeColor="#0099FF" RepeatDirection="Vertical" OnSelectedIndexChanged="checkfood_SelectedIndexChanged">
                     <asp:ListItem>Breakfast</asp:ListItem>
                     <asp:ListItem>Lunch</asp:ListItem>
-                    <asp:ListItem>Dinner</asp:ListItem>
+                    <asp:ListItem >Dinner</asp:ListItem>
                 </asp:CheckBoxList>
                 <br />
-                <asp:RadioButtonList ID="RadioButtonList1" runat="server" ForeColor="#0099FF" RepeatDirection="Horizontal">
-                    <asp:ListItem>Only Veg</asp:ListItem>
-                    <asp:ListItem>Veg &amp; Non Veg</asp:ListItem>
-                </asp:RadioButtonList>
                 <br />
-                <asp:Button ID="btnfoodcost" runat="server" ForeColor="#0099FF" Text="Cost" />
+                <asp:Button ID="btnfoodcost" runat="server" ForeColor="#0099FF" Text="Cost" OnClick="btnfoodcost_Click" />
                 <br />
                 <br />
             </td>

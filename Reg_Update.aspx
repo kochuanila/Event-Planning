@@ -15,22 +15,22 @@
             height: 22px;
             width: 410px;
         }
-        .auto-style8 {
-            width: 265px;
-        }
         .auto-style9 {
             height: 22px;
-            width: 265px;
+            width: 386px;
         }
         .auto-style10 {
             width: 151px;
+        }
+        .auto-style11 {
+            width: 386px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="nav-justified">
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
             <td class="auto-style6">&nbsp;</td>
             <td>&nbsp;</td>
@@ -44,125 +44,125 @@
             <td class="auto-style3"></td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
             <td class="auto-style6">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">
                 <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="ID"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtid" CssClass="form-control" placeholder="ID" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtid" CssClass="form-control" placeholder="ID" runat="server" Width="310px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
             <td class="auto-style6">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">
                 <asp:Label ID="Label2" runat="server" ForeColor="#0099FF" Text="Name"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtname" CssClass="form-control" placeholder="Name" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtname" CssClass="form-control" placeholder="Name" runat="server" Width="309px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
             <td class="auto-style6">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">
                 <asp:Label ID="Label3" runat="server" ForeColor="#0099FF" Text="Address"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtadd" CssClass="form-control" placeholder="Address" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtadd" CssClass="form-control" placeholder="Address" runat="server" Width="310px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
             <td class="auto-style6">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">
                 <asp:Label ID="Label4" runat="server" ForeColor="#0099FF" Text="Contact"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtcontact" CssClass="form-control" placeholder="Contact" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtcontact" CssClass="form-control" placeholder="Contact" runat="server" Width="309px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
             <td class="auto-style6">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">
                 <asp:Label ID="Label5" runat="server" ForeColor="#0099FF" Text="Email"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtemail" CssClass="form-control" placeholder="Email" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtemail" CssClass="form-control" placeholder="Email" runat="server" Width="309px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
             <td class="auto-style6">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">
                 <asp:Label ID="Label6" runat="server" ForeColor="#0099FF" Text="Username"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtuname" CssClass="form-control" placeholder="Username" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                <asp:TextBox ID="txtuname" CssClass="form-control" placeholder="Username" runat="server" OnTextChanged="TextBox6_TextChanged" Width="309px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
             <td class="auto-style6">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">
                 <asp:Label ID="Label7" runat="server" ForeColor="#0099FF" Text="Password"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtpass" CssClass="form-control" placeholder="Password" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtpass" CssClass="form-control" placeholder="Password" runat="server" Width="308px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
             <td class="auto-style6">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">
                 &nbsp;</td>
             <td class="auto-style6">
@@ -170,13 +170,13 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
             <td class="auto-style6">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
             <td class="auto-style6">
                 <asp:Button ID="btnselect" runat="server" ForeColor="#0099FF" OnClick="btnselect_Click" Text="SELECT" />
@@ -186,7 +186,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
             <td class="auto-style6">&nbsp;</td>
             <td>&nbsp;</td>

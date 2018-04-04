@@ -12,15 +12,16 @@ namespace Event_Planing
     public partial class Book_Transportation : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection();
+       
         protected void Page_Load(object sender, EventArgs e)
         {
 
            
             if(!IsPostBack)
             {
-                Panel1.Visible = false;
-                Panel2.Visible = false;
-
+                Panel1.Visible = true;
+                Panel2.Visible = true;
+               
             }
             txtevdate.Text = DateTime.Now.ToString();
         }
@@ -30,45 +31,48 @@ namespace Event_Planing
             con.Open();
 
         }
+        
         protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (RadioButtonList1.SelectedItem.Text == "BUS")
-            {
-                Panel1.Visible = true;
-                Panel2.Visible = false;
+            //if (RadioButtonList1.SelectedItem.Text == "BUS")
+            //{
+            //    getcon();
+            //    //Panel1.Visible = true;
+            //    //Panel2.Visible = false;
 
-                getcon();
-                String sel = "select max(ID) from Book_Bus";
-                SqlCommand cmd = new SqlCommand(sel, con);
-                SqlDataAdapter sd = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                sd.Fill(dt);
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    int j = Convert.ToInt32(dt.Rows[i][0].ToString()) + 1;
-                    txtBkngID.Text = j.ToString();
-                }
-                con.Close();
-            }
-            else if (RadioButtonList1.SelectedItem.Text == "CAR")
-            {
-                Panel1.Visible = false;
-                Panel2.Visible = true;
 
-                getcon();
-                String sel = "select max(ID) from Book_Car";
-                SqlCommand cmd = new SqlCommand(sel, con);
-                SqlDataAdapter sd = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                sd.Fill(dt);
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    int j = Convert.ToInt32(dt.Rows[i][0].ToString()) + 1;
-                    txtBkngID.Text = j.ToString();
-                }
-                
-                con.Close();
-            }
+            //    String sel = "select max(ID) from Book_Bus";
+            //    SqlCommand cmd = new SqlCommand(sel, con);
+            //    SqlDataAdapter sd = new SqlDataAdapter(cmd);
+            //    DataTable dt = new DataTable();
+            //    sd.Fill(dt);
+            //    for (int i = 0; i < dt.Rows.Count; i++)
+            //    {
+            //        int j = Convert.ToInt32(dt.Rows[i][0].ToString()) + 1;
+            //        txtBkngID.Text = j.ToString();
+            //    }
+            //    con.Close();
+            //}
+            //else if (RadioButtonList1.SelectedItem.Text == "CAR")
+            //{
+            //    getcon();
+            //    Panel1.Visible = false;
+            //    Panel2.Visible = true;
+
+
+            //    String sel = "select max(ID) from Book_Car";
+            //    SqlCommand cmd = new SqlCommand(sel, con);
+            //    SqlDataAdapter sd = new SqlDataAdapter(cmd);
+            //    DataTable dt = new DataTable();
+            //    sd.Fill(dt);
+            //    for (int i = 0; i < dt.Rows.Count; i++)
+            //    {
+            //        int j = Convert.ToInt32(dt.Rows[i][0].ToString()) + 1;
+            //        txtBkngID.Text = j.ToString();
+            //    }
+
+            //    con.Close();
+            //}
         }
 
         protected void btnsubmit_Click(object sender, EventArgs e)
@@ -81,6 +85,24 @@ namespace Event_Planing
             Session["Amount"] = txtpaynow.Text;
             Session["BkngNo"] = txtBkngID.Text;
 
+            lblcartype.Text = "";
+            lblcarrate.Text = "";
+            lblcarno.Text = "";
+            txtnocar.Text = "";
+            txttotalamunt.Text = "";
+            txtamtpay.Text = "";
+            lbltype.Text = "";
+            lblrate.Text = "";
+            lblbusno.Text = "";
+            txtnobus.Text = "";
+            txttotamunt.Text = "";
+            txtpaynow.Text = "";
+            txtreplace.Text = "";
+            txtretime.Text = "";
+            txtevdate.Text = "";
+            txtvenue.Text = "";
+            txtBkngID.Text = "";
+  
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
@@ -148,6 +170,24 @@ namespace Event_Planing
             con.Close();
             Session["Amount"] = txtamtpay.Text;
             Session["BkngNo"] = txtBkngID.Text;
+
+            lblcartype.Text = "";
+            lblcarrate.Text = "";
+            lblcarno.Text = "";
+            txtnocar.Text = "";
+            txttotalamunt.Text = "";
+            txtamtpay.Text = "";
+            lbltype.Text = "";
+            lblrate.Text = "";
+            lblbusno.Text = "";
+            txtnobus.Text = "";
+            txttotamunt.Text = "";
+            txtpaynow.Text = "";
+            txtreplace.Text = "";
+            txtretime.Text = "";
+            txtevdate.Text = "";
+            txtvenue.Text = "";
+            txtBkngID.Text = "";
         }
 
         //protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
@@ -159,6 +199,11 @@ namespace Event_Planing
         {
 
         }
+
+        //protected void btnclear_Click(object sender, EventArgs e)
+        //{
+
+        //}
 
 
         

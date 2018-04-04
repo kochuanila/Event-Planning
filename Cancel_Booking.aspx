@@ -5,7 +5,10 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 265px;
+            width: 390px;
+        }
+        .auto-style3 {
+            width: 126px;
         }
     </style>
 </asp:Content>
@@ -14,78 +17,92 @@
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">
+                &nbsp;</td>
+            <td class="auto-style3">
                 <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="ID"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtid" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtid" CssClass="form-control" runat="server" Width="325px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">
+                &nbsp;</td>
+            <td class="auto-style3">
                 <asp:Label ID="Label2" runat="server" ForeColor="#0099FF" Text="Date"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtdate" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtdate" CssClass="form-control" runat="server" Width="324px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">
+                &nbsp;</td>
+            <td class="auto-style3">
                 <asp:Label ID="Label3" runat="server" ForeColor="#0099FF" Text="Enter your Booking ID"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtBkngID" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtBkngID" CssClass="form-control" runat="server" Width="321px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>
                 <asp:Button ID="btnviewdetails" runat="server" ForeColor="#0099FF" OnClick="btnviewdetails_Click" Text="View Details" />
             </td>
@@ -94,12 +111,14 @@
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
-            <td class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
             <td>
                 <asp:Label ID="lblbooingdate" runat="server" ForeColor="#0099FF"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -116,12 +135,14 @@
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>
                 <asp:Button ID="btncancelbooking" runat="server" ForeColor="#0099FF" OnClick="btncancelbooking_Click" Text="CANCEL BOOKING" />
             </td>
@@ -130,30 +151,35 @@
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>

@@ -1,129 +1,124 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Add_Venue.aspx.cs" Inherits="Event_Planing.Add_Venue" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style1 {
-            width: 393px;
-        }
-        .auto-style2 {
-            width: 125px;
-        }
         .auto-style3 {
             width: 78px;
-        }
-        .auto-style4 {
-            width: 393px;
-            height: 121px;
-        }
-        .auto-style5 {
-            width: 125px;
-            height: 121px;
-        }
-        .auto-style6 {
-            width: 78px;
-            height: 121px;
-        }
-        .auto-style7 {
-            height: 121px;
+            text-align: right;
         }
         .nav-justified {
             height: 638px;
             width: 886px;
+        }
+        .auto-style9 {
+            width: 359px;
+        }
+        .auto-style11 {
+        }
+        .auto-style12 {
+            height: 35px;
+        }
+        .auto-style13 {
+            height: 35px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="nav-justified">
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style9">&nbsp;</td>
+            <td>&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">
+            <td class="auto-style9">&nbsp;</td>
+            <td class="auto-style11" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="Add Venue"></asp:Label>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style9">&nbsp;</td>
+            <td>&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style9">
+                &nbsp;</td>
+            <td>
                 <asp:Label ID="Label2" runat="server" ForeColor="#0099FF" Text="Venu Name"></asp:Label>
             </td>
             <td class="auto-style3">
-                <asp:TextBox ID="txtvname" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtvname" CssClass="form-control" runat="server" Width="288px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style9">&nbsp;</td>
+            <td>&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style9">
+                &nbsp;</td>
+            <td>
                 <asp:Label ID="Label3" runat="server" ForeColor="#0099FF" Text="Venu Address"></asp:Label>
             </td>
             <td class="auto-style3">
-                <asp:TextBox ID="txtvadd" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtvadd" CssClass="form-control" runat="server" Width="286px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style9">&nbsp;</td>
+            <td>&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style9">
+                &nbsp;</td>
+            <td>
                 <asp:Label ID="Label4" runat="server" ForeColor="#0099FF" Text="Contact_no"></asp:Label>
             </td>
             <td class="auto-style3">
-                <asp:TextBox ID="txtvcontact" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtvcontact" CssClass="form-control" runat="server" Width="286px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style9">&nbsp;</td>
+            <td>&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style9">
+                &nbsp;</td>
+            <td>
                 <asp:Label ID="Label5" runat="server" ForeColor="#0099FF" Text="Capacity"></asp:Label>
             </td>
             <td class="auto-style3">
-                <asp:TextBox ID="txtcapacity" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtcapacity" CssClass="form-control"  runat="server" Width="286px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style9">&nbsp;</td>
+            <td>&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style9">
+                &nbsp;</td>
+            <td>
                 <asp:Label ID="Label6" runat="server" ForeColor="#0099FF" Text="Prefered for"></asp:Label>
             </td>
             <td class="auto-style3">
-                <asp:DropDownList ID="DropDownList1" runat="server" ForeColor="#0099FF">
+                <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server" ForeColor="#0099FF" Width="285px">
                     <asp:ListItem>--select--</asp:ListItem>
                     <asp:ListItem>Marrige</asp:ListItem>
                     <asp:ListItem>Anniversery Party</asp:ListItem>
@@ -133,60 +128,56 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style9">&nbsp;</td>
+            <td>&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style9">
+                &nbsp;</td>
+            <td>
                 <asp:Label ID="Label7" runat="server" ForeColor="#0099FF" Text="Cost"></asp:Label>
             </td>
             <td class="auto-style3">
-                <asp:TextBox ID="txtcost" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtcost" CssClass="form-control" runat="server" Width="284px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style9">&nbsp;</td>
+            <td>&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">
+            <td class="auto-style9">
+                &nbsp;</td>
+            <td>
                 <asp:Label ID="Label8" runat="server" ForeColor="#0099FF" Text="Image"></asp:Label>
             </td>
             <td class="auto-style3">
-                <asp:FileUpload ID="FileUpload1" runat="server" ForeColor="#0099FF" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:FileUpload ID="FileUpload1" runat="server" ForeColor="#0099FF" Width="265px" />
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style9">&nbsp;</td>
+            <td>&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">
+            <td class="auto-style9">&nbsp;</td>
+            <td class="auto-style11" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnaddvenue" runat="server" ForeColor="#0099FF" OnClick="btnaddvenue_Click" Text="ADD VENUE" />
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style4">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" Height="16px" Width="16px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" BorderWidth="2px" ForeColor="#0099FF">
+            <td class="auto-style12" colspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" Height="16px" Width="160px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" BorderWidth="2px" ForeColor="#0099FF" HorizontalAlign="Right">
                     <Columns>
                         <asp:TemplateField HeaderText="Venue_id">
                             <EditItemTemplate>
@@ -256,15 +247,12 @@
                         <asp:CommandField HeaderText="Deletion" ShowDeleteButton="True" />
                     </Columns>
                 </asp:GridView>
-            </td>
-            <td class="auto-style5">&nbsp;</td>
-            <td class="auto-style6">
                 &nbsp;</td>
-            <td class="auto-style7">&nbsp;</td>
+            <td class="auto-style13"></td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style9">&nbsp;</td>
+            <td>&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>

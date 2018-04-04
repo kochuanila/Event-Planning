@@ -178,6 +178,7 @@
                 <br />
             </td>
             <td class="auto-style13">
+
                 <asp:Panel ID="Panel1" runat="server" BorderColor="#0099FF" BorderWidth="2px" Height="515px" Width="313px">
                     &nbsp;&nbsp;
                     <br />

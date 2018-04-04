@@ -114,8 +114,8 @@ namespace Event_Planing
             String Address = ((TextBox)GridView1.Rows[e.RowIndex].FindControl("TextBox2")).Text;
             String Contact_no = ((TextBox)GridView1.Rows[e.RowIndex].FindControl("TextBox3")).Text;
             String Capacity = ((TextBox)GridView1.Rows[e.RowIndex].FindControl("TextBox4")).Text;
-            String Prefered_for = ((TextBox)GridView1.Rows[e.RowIndex].FindControl("TextBox4")).Text;
-            String Cost = ((TextBox)GridView1.Rows[e.RowIndex].FindControl("TextBox4")).Text;
+            String Prefered_for = ((TextBox)GridView1.Rows[e.RowIndex].FindControl("TextBox5")).Text;
+            String Cost = ((TextBox)GridView1.Rows[e.RowIndex].FindControl("TextBox6")).Text;
             String update = "update Add_Venue set Name='" + Name + "', Address='" + Address + "',Contact_no='" + Contact_no + "',Capacity='" + Capacity + "',Prefered_for='" + Prefered_for + "',Cost='" + Cost + "' where Venu_id='" + Venu_id + "'";
             SqlCommand cmd = new SqlCommand(update, con);
             cmd.ExecuteNonQuery();

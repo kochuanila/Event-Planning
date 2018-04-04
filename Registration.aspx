@@ -78,7 +78,7 @@
                 <asp:Label ID="Label3" runat="server" ForeColor="#0099FF" Text="Name"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtname" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtname" CssClass="form-control" runat="server" Width="213px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -94,7 +94,7 @@
                 <asp:Label ID="Label4" runat="server" ForeColor="#0099FF" Text="Address"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtaddress" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtaddress" CssClass="form-control" runat="server" Width="213px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -110,7 +110,7 @@
                 <asp:Label ID="Label5" runat="server" ForeColor="#0099FF" Text="Contact"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtcontact" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtcontact" CssClass="form-control" runat="server" Width="214px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -126,7 +126,7 @@
                 <asp:Label ID="Label6" runat="server" ForeColor="#0099FF" Text="Email"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtemail" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtemail" CssClass="form-control" runat="server" Width="214px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -142,7 +142,7 @@
                 <asp:Label ID="Label7" runat="server" ForeColor="#0099FF" Text="Username"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtuname" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtuname" CssClass="form-control" runat="server" Width="214px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -158,7 +158,7 @@
                 <asp:Label ID="Label8" runat="server" ForeColor="#0099FF" Text="Password"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtpassword" runat="server" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="txtpassword" CssClass="form-control" runat="server" TextMode="Password" Width="213px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -174,7 +174,7 @@
                 <asp:Label ID="Label9" runat="server" ForeColor="#0099FF" Text="Con_password"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtconpass" runat="server" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="txtconpass" CssClass="form-control" runat="server" TextMode="Password" Width="212px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>

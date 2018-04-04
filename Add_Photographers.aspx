@@ -14,13 +14,22 @@
             height: 24px;
             width: 306px;
         }
+        .auto-style5 {
+        }
+        .auto-style6 {
+            height: 24px;
+            width: 184px;
+        }
+        .auto-style7 {
+            width: 184px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table class="auto-style1">
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
@@ -33,144 +42,146 @@
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>
+            <td class="auto-style7">
                 <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="Name"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtname" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtname" CssClass="form-control"  runat="server" Width="392px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>
+            <td class="auto-style7">
                 <asp:Label ID="Label2" runat="server" ForeColor="#0099FF" Text="Age"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtage" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtage" CssClass="form-control"  runat="server" Width="391px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>
+            <td class="auto-style7">
                 <asp:Label ID="Label3" runat="server" ForeColor="#0099FF" Text="Gender"></asp:Label>
             </td>
             <td>
-                <asp:RadioButtonList ID="RadioButtonList1" runat="server" ForeColor="#0099FF" RepeatDirection="Horizontal">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:RadioButtonList ID="RadioButtonList1" runat="server" ForeColor="#0099FF" RepeatDirection="Horizontal" Height="16px" Width="250px">
                     <asp:ListItem>Male</asp:ListItem>
                     <asp:ListItem>Female</asp:ListItem>
                 </asp:RadioButtonList>
+            &nbsp;&nbsp;
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>
+            <td class="auto-style7">
                 <asp:Label ID="Label4" runat="server" ForeColor="#0099FF" Text="Address"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtadd" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtadd" CssClass="form-control"  runat="server" Width="394px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>
+            <td class="auto-style7">
                 <asp:Label ID="Label5" runat="server" ForeColor="#0099FF" Text="Contact No"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtcontact" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtcontact" CssClass="form-control"  runat="server" Width="395px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style4"></td>
-            <td class="auto-style2">
+            <td class="auto-style6">
                 <asp:Label ID="Label6" runat="server" ForeColor="#0099FF" Text="Email"></asp:Label>
             </td>
             <td class="auto-style2">
-                <asp:TextBox ID="txtemail" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtemail" CssClass="form-control" runat="server" Width="393px"></asp:TextBox>
             </td>
             <td class="auto-style2"></td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>
+            <td class="auto-style7">
                 <asp:Label ID="Label7" runat="server" ForeColor="#0099FF" Text="Experience"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtexp" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtexp" CssClass="form-control"  runat="server" Width="393px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>
+            <td class="auto-style7">
                 <asp:Label ID="Label8" runat="server" ForeColor="#0099FF" Text="Rate"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtrate" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtrate" CssClass="form-control"  runat="server" Width="391px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>
                 <asp:Button ID="btnadd" runat="server" ForeColor="#0099FF" OnClick="btnadd_Click" Text="ADD" />
             </td>
@@ -178,14 +189,13 @@
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>
+            <td class="auto-style5" colspan="2">
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" BorderWidth="2px" ForeColor="#0099FF">
                     <Columns>
                         <asp:TemplateField HeaderText="ID">
@@ -269,25 +279,25 @@
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>

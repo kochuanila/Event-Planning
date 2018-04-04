@@ -5,7 +5,7 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 318px;
+            width: 466px;
         }
         .auto-style3 {
             width: 135px;
@@ -48,17 +48,27 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style3">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">
                 <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="Booking ID"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtbookid" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtbookid" CssClass="form-control" runat="server" Width="265px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style3">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -67,8 +77,15 @@
                 <asp:Label ID="Label2" runat="server" ForeColor="#0099FF" Text="Status"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtstatus" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtstatus" CssClass="form-control" runat="server" Width="266px"></asp:TextBox>
             </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+            <td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -83,18 +100,6 @@
             <td>
                 <asp:Button ID="btnok" runat="server" ForeColor="#0099FF" OnClick="btnok_Click" Text="OK" />
             </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>

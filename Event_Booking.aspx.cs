@@ -20,7 +20,13 @@ namespace Event_Planing
             {
                 GenerateAutoID();
                 getcon();
+                string com = "select Name from Add_Venue";
+                SqlDataAdapter adpt = new SqlDataAdapter(com, con);
                 DataTable dt=new DataTable();
+                adpt.Fill(dt);
+                DropDownList2.DataSource = dt;
+                DropDownList2.DataTextField = "Name";
+                DropDownList2.DataBind();
                 checkfood.DataSource = dt;
                 string str = "select Id,[food]=Food+Food_Type from Food";
                 SqlCommand cmd = new SqlCommand(str, con);
@@ -34,6 +40,7 @@ namespace Event_Planing
                     checkfood.DataTextField = "food";
                     checkfood.DataBind();
                 }
+                con.Close();
             }
             txtbookdate.Text = DateTime.Now.ToString();
         }
@@ -49,7 +56,7 @@ namespace Event_Planing
 
             //getcon();
             DBManager db = new DBManager();
-            string str = "select Count(Book_ID) from Book_Event";
+            string str = "select Count(Book_ID) from Book_Events";
             //SqlCommand cmd = new SqlCommand(str, con);
             int i = Convert.ToInt32(db.ExecScaler(str));
             //con.Close();
@@ -152,10 +159,31 @@ namespace Event_Planing
                     con.Close();
                     int a;
                     a = Convert.ToInt32(txtnoguest.Text);
-                    lblfoodcost.Text = cst.ToString();
+                    lblfoodcost.Text = (cst * a).ToString();
 
                 }
             }
+        }
+
+        protected void btnbook_Click(object sender, EventArgs e)
+        {
+            getcon();
+            String ins = "insert into Book_Events values('" + txtBkngID.Text + "','" + txtbookdate.Text + "','" + DropDownList1.SelectedValue.ToString() + "','" + txtdate.Text + "','" + txtnoguest.Text + "','" + DropDownList2.SelectedValue.ToString() + "','" + checkequi.SelectedItem.ToString() + "','" + lblequicost.Text + "','" + checkdectn.SelectedItem.ToString() + "','" + lbldectncost.Text + "','" + checkfood.SelectedItem.ToString() + "','" + lblfoodcost.Text + "','" + txttotamunt.Text + "','" + txtpaynow.Text + "')";
+            SqlCommand cmd = new SqlCommand(ins, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Session["Amount"] = txtpaynow.Text;
+            Session["BkngNo"] = txtBkngID.Text;
+
+            txtBkngID.Text = "";
+            txtbookdate.Text = "";
+            txtnoguest.Text = "";
+            txtdate.Text = "";
+            txttotamunt.Text = "";
+            txtpaynow.Text = "";
+            lblequicost.Text = "";
+            lbldectncost.Text = "";
+            lblfoodcost.Text = "";
         }
     }
 }

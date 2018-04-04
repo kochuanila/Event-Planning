@@ -62,7 +62,6 @@
     <Content Include="Add_Photographers.aspx" />
     <Content Include="Add_Update_Status.aspx" />
     <Content Include="Add_Venue.aspx" />
-    <Content Include="Book_Event.aspx" />
     <Content Include="Book_Photographer.aspx" />
     <Content Include="Book_Transportation.aspx" />
     <Content Include="Cancel_Booking.aspx" />
@@ -76,6 +75,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="Reg_Update.aspx" />
+    <Content Include="Trans_Book.aspx" />
     <Content Include="User.Master" />
     <Content Include="Main.Master" />
     <Content Include="Login.Master" />
@@ -171,13 +171,6 @@
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
-    <Compile Include="Book_Event.aspx.cs">
-      <DependentUpon>Book_Event.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Book_Event.aspx.designer.cs">
-      <DependentUpon>Book_Event.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Book_Photographer.aspx.cs">
       <DependentUpon>Book_Photographer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -263,6 +256,13 @@
     </Compile>
     <Compile Include="Reg_Update.aspx.designer.cs">
       <DependentUpon>Reg_Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trans_Book.aspx.cs">
+      <DependentUpon>Trans_Book.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trans_Book.aspx.designer.cs">
+      <DependentUpon>Trans_Book.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.Master.cs">
       <DependentUpon>User.Master</DependentUpon>

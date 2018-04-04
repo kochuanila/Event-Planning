@@ -27,7 +27,7 @@ namespace Event_Planing
         public void grid()
         {
             getcon();
-            string str = "select Book_ID,Booking_date,Event_type,Event_place,No_of_guest,Date,Equipments,Decoration,Food,Food_type,Total_amount,Amount_Pay from Book_Events";
+            string str = "select Book_ID,Booking_date,Event_type,Event_place,No_of_guest,Date,Equipments,Equi_cost,Decoration,Dectn_cost,Food,Food_cost,Total_amount,Amount_Pay from Book_Events";
             SqlCommand cmd = new SqlCommand(str, con);
             SqlDataAdapter adr = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

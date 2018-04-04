@@ -5,7 +5,7 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 232px;
+            width: 442px;
         }
     </style>
 </asp:Content>
@@ -32,6 +32,7 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label6" runat="server" ForeColor="#0099FF" Text="OUR PHOTOGRAPHERS" style="text-decoration: underline"></asp:Label>
             </td>
             <td>&nbsp;</td>

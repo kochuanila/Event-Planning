@@ -40,7 +40,7 @@ namespace Event_Planing
         protected void btnviewdetails_Click(object sender, EventArgs e)
         {
             getcon();
-            String sel = "select Booking_date,Date,Total_amount,Amount_Pay,Event_place from Book_Event where Book_ID='"+txtBkngID.Text+"'";
+            String sel = "select Booking_date,Date,Total_amount,Amount_Pay,Event_place from Book_Events where Book_ID='"+txtBkngID.Text+"'";
             SqlCommand cmd = new SqlCommand(sel, con);
             SqlDataAdapter sd1 = new SqlDataAdapter(cmd);
             DataTable dt1 = new DataTable();
@@ -53,13 +53,18 @@ namespace Event_Planing
                 lblpaynow.Text = dt1.Rows[0][3].ToString();
                 lblevplace.Text = dt1.Rows[0][4].ToString();
             }
+            else
+            {
+                 Response.Write("<script>alert('Invalid Booking id! :-)')</script>");
+            }
             con.Close();
+            
         }
 
         protected void btncancelbooking_Click(object sender, EventArgs e)
         {
             getcon();
-            String del = "delete from Book_Event where Book_ID='" + txtBkngID + "'";
+            String del = "delete from Book_Events where Book_ID='" + txtBkngID + "'";
             cmd = new SqlCommand(del, con);
             cmd.ExecuteNonQuery();
             Response.Write("<script>alert('Your Booking is Canceled! :-)')</script>");

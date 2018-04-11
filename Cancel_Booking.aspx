@@ -5,10 +5,9 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 390px;
+            width: 305px;
         }
         .auto-style3 {
-            width: 126px;
         }
     </style>
 </asp:Content>
@@ -31,8 +30,9 @@
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style3" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label4" runat="server" ForeColor="#0099FF" style="text-decoration: underline" Text="CANCEL BOOKING"></asp:Label>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -89,6 +89,7 @@
             </td>
             <td>
                 <asp:TextBox ID="txtBkngID" CssClass="form-control" runat="server" Width="321px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtBkngID" ErrorMessage="Please Enter Your ID " ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -120,15 +121,15 @@
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
             <td>
-                <asp:Label ID="lblbooingdate" runat="server" ForeColor="#0099FF"></asp:Label>
+                <asp:Label ID="lblbooingdate" runat="server" ForeColor="#0099FF">Booking date</asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="lblevdate" runat="server" ForeColor="#0099FF"></asp:Label>
+                <asp:Label ID="lblevdate" runat="server" ForeColor="#0099FF">Event date</asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="lbltotamunt" runat="server" ForeColor="#0099FF"></asp:Label>
+                <asp:Label ID="lbltotamunt" runat="server" ForeColor="#0099FF">Amount</asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="lblpaynow" runat="server" ForeColor="#0099FF"></asp:Label>
+                <asp:Label ID="lblpaynow" runat="server" ForeColor="#0099FF">Pay Now</asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="lblevplace" runat="server" ForeColor="#0099FF"></asp:Label>
+                <asp:Label ID="lblevplace" runat="server" ForeColor="#0099FF">Event place</asp:Label>
 &nbsp;&nbsp; </td>
             <td>&nbsp;</td>
         </tr>

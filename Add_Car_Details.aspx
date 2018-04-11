@@ -67,6 +67,7 @@
             </td>
             <td class="auto-style10">
                 <asp:TextBox ID="txtcarname" CssClass="form-control"  runat="server" Width="362px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtcarname" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -103,6 +104,7 @@
             </td>
             <td class="auto-style10">
                 <asp:TextBox ID="txtcarno" CssClass="form-control"  runat="server" Width="365px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtcarno" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -119,6 +121,7 @@
             </td>
             <td class="auto-style10">
                 <asp:TextBox ID="txtrate" CssClass="form-control"  runat="server" Width="366px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtrate" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>

@@ -8,7 +8,13 @@
             width: 405px;
         }
         .auto-style3 {
-            width: 180px;
+        }
+        .auto-style4 {
+            width: 405px;
+            height: 22px;
+        }
+        .auto-style5 {
+            height: 22px;
         }
     </style>
 </asp:Content>
@@ -28,9 +34,16 @@
         </tr>
         <tr>
             <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style3" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label8" runat="server" ForeColor="#0099FF" style="text-decoration: underline" Text="UPDATE/ADD STATUS"></asp:Label>
+                &nbsp;</td>
             <td>&nbsp;</td>
-            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style4"></td>
+            <td class="auto-style5"></td>
+            <td class="auto-style5"></td>
+            <td class="auto-style5"></td>
         </tr>
         <tr>
             <td class="auto-style2">&nbsp;</td>
@@ -38,8 +51,10 @@
                 <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="Booking ID"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtbookid" CssClass="form-control" runat="server" Width="293px"></asp:TextBox>
-                <asp:Button ID="btnsearch" runat="server" ForeColor="#0099FF" OnClick="btnsearch_Click" Text="Search" />
+                <asp:DropDownList ID="DropDownList2" runat="server" AppendDataBoundItems="true" AutoPostBack="true" CssClass="form-control" Width="286px">
+                    <asp:ListItem Value="0">--Select--</asp:ListItem>
+                </asp:DropDownList>
+                <asp:Button ID="btnsearch" runat="server" ForeColor="#0099FF" OnClick="btnsearch_Click" Text="Search" /> 
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -135,7 +150,7 @@
                 <asp:Label ID="Label7" runat="server" ForeColor="#0099FF" Text="Status"></asp:Label>
             </td>
             <td>
-                <asp:DropDownList ID="DropDownList1" CssClass="form-control"  runat="server">
+                <asp:DropDownList ID="DropDownList1" CssClass="form-control"  runat="server" Width="288px">
                     <asp:ListItem>--Select--</asp:ListItem>
                     <asp:ListItem>Approved</asp:ListItem>
                     <asp:ListItem>Pending</asp:ListItem>

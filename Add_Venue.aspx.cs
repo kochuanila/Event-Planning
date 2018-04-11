@@ -29,7 +29,7 @@ namespace Event_Planing
         public void grid()
         {
             getcon();
-            string str = "select Venu_id,Name,Address,Contact_no,Capacity,Prefered_for,Cost,Image from Add_Venue ";
+            string str = "select Venu_id,Name,Address,Contact_no,Capacity,Cost,Image from Add_Venues ";
             SqlCommand cmd = new SqlCommand(str, con);
             cmd.ExecuteNonQuery();
             SqlDataAdapter adr = new SqlDataAdapter(cmd);
@@ -52,11 +52,11 @@ namespace Event_Planing
                 FileUpload1.PostedFile.SaveAs(Server.MapPath("/Uploads/" + str));
                 string path = "~/Uploads/" + str.ToString();
                 getcon();
-                String ins = "insert into Add_Venue values('" + txtvname.Text + "','" + txtvadd.Text + "','" + txtvcontact.Text + "','" + txtcapacity.Text + "','" + DropDownList1.SelectedValue + "','" + txtcost.Text + "','" + path + "')";
+                String ins = "insert into Add_Venues values('" + txtvname.Text + "','" + txtvadd.Text + "','" + txtvcontact.Text + "','" + txtcapacity.Text + "','" + txtcost.Text + "','" + path + "')";
                 SqlCommand cmd = new SqlCommand(ins, con);
                 cmd.ExecuteNonQuery();
                 Response.Write("<script>alert('Data Added Successfully! :-)')</script>");
-                String select = "select * from Add_Venue";
+                String select = "select * from Add_Venues";
                 cmd = new SqlCommand(select, con);
                 cmd.ExecuteNonQuery();
 
@@ -85,7 +85,7 @@ namespace Event_Planing
         {
             getcon();
             String Venu_id = ((Label)GridView1.Rows[e.RowIndex].FindControl("label9")).Text;
-            string del = "delete from Add_Venue where Venu_id=" + Venu_id;
+            string del = "delete from Add_Venues where Venu_id=" + Venu_id;
             SqlCommand cmd = new SqlCommand(del, con);
             cmd.ExecuteNonQuery();
             Response.Write("<script>alert('Data Deleted Successfully! :-)')</script>");
@@ -116,7 +116,7 @@ namespace Event_Planing
             String Capacity = ((TextBox)GridView1.Rows[e.RowIndex].FindControl("TextBox4")).Text;
             String Prefered_for = ((TextBox)GridView1.Rows[e.RowIndex].FindControl("TextBox5")).Text;
             String Cost = ((TextBox)GridView1.Rows[e.RowIndex].FindControl("TextBox6")).Text;
-            String update = "update Add_Venue set Name='" + Name + "', Address='" + Address + "',Contact_no='" + Contact_no + "',Capacity='" + Capacity + "',Prefered_for='" + Prefered_for + "',Cost='" + Cost + "' where Venu_id='" + Venu_id + "'";
+            String update = "update Add_Venues set Name='" + Name + "', Address='" + Address + "',Contact_no='" + Contact_no + "',Capacity='" + Capacity + "',Prefered_for='" + Prefered_for + "',Cost='" + Cost + "' where Venu_id='" + Venu_id + "'";
             SqlCommand cmd = new SqlCommand(update, con);
             cmd.ExecuteNonQuery();
             Response.Write("<script>alert('Data Updated Successfully! :-)')</script>");

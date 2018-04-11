@@ -55,7 +55,7 @@
         <tr>
             <td class="auto-style16">&nbsp;</td>
             <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="Add Bus Details"></asp:Label>
+                <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="Add Bus Details" style="text-decoration: underline"></asp:Label>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -72,6 +72,7 @@
             </td>
             <td class="auto-style2">
                 <asp:TextBox ID="txtbusname" CssClass="form-control" runat="server" Width="373px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtbusname" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -112,6 +113,7 @@
             </td>
             <td class="auto-style6">
                 <asp:TextBox ID="txtbusno" CssClass="form-control" runat="server" Width="371px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtbusno" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td class="auto-style7"></td>
         </tr>
@@ -128,6 +130,7 @@
             </td>
             <td class="auto-style11">
                 <asp:TextBox ID="txtrate" CssClass="form-control" runat="server" Width="372px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtrate" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td class="auto-style12"></td>
         </tr>

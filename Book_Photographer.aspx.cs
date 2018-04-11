@@ -12,7 +12,7 @@ namespace Event_Planing
     public partial class Book_Photographer : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection();
-        String ID = "";
+        String ID = "P001890";
         protected void Page_Load(object sender, EventArgs e)
         {
         if (!IsPostBack)
@@ -38,7 +38,7 @@ namespace Event_Planing
             int i = Convert.ToInt32(cmd.ExecuteScalar());
             con.Close();
             i++;
-            lblbookid.Text = ID + i.ToString();
+            txtBkngID.Text = ID + i.ToString();
 
             
         }
@@ -48,11 +48,14 @@ namespace Event_Planing
         protected void btnbook_Click(object sender, EventArgs e)
         {
             getcon();
-            String ins = "insert into Book_Photographers values('" + lblbookid.Text + "','" + txtdate.Text + "','" + txttime.Text + "','" + txtreplace.Text + "','" + txtretime.Text + "','" + txtvenue.Text + "','" + txtid.Text + "','" + txtname.Text + "','"+txttotamunt.Text+"')";
+            String ins = "insert into Book_Photographers values('" + txtBkngID.Text + "','"+txtuname.Text+"','" + txtdate.Text + "','" + txttime.Text + "','" + txtreplace.Text + "','" + txtretime.Text + "','" + txtvenue.Text + "','" + txtid.Text + "','" + txtname.Text + "','" + txttotamunt.Text + "')";
             SqlCommand cmd = new SqlCommand(ins, con);
             cmd.ExecuteNonQuery();
-            
-            lblbookid.Text = "";
+            Session["Amount"] = txtpaynow.Text;
+            Session["BkngNo"] = txtBkngID.Text;
+            Session["UserName"] = txtuname.Text;
+            Response.Redirect("Payment.aspx");
+            txtBkngID.Text = "";
             txtdate.Text = "";
             txttime.Text = "";
             txtreplace.Text = "";
@@ -64,6 +67,7 @@ namespace Event_Planing
             txtrate.Text = "";
             txttotamunt.Text = "";
             txtpaynow.Text = "";
+            txtuname.Text = "";
         }
         
         protected void txtid_TextChanged(object sender, EventArgs e)
@@ -78,7 +82,7 @@ namespace Event_Planing
         protected void Button1_Click(object sender, EventArgs e)
         {
             getcon();
-            String sel1 = "select Name,Contact_no,Rate from Add_photographer where Pg_id='" + txtid.Text + "'";
+            String sel1 = "select Name,Contact_no,Rate from Add_photographers where Pg_id='" + txtid.Text + "'";
             SqlCommand cmd1 = new SqlCommand(sel1, con);
             SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
             DataTable dt1 = new DataTable();

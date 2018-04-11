@@ -40,7 +40,7 @@ SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 			</div>
 			<div class="header-w3right">
 				<ul>
-					<li><a href="mailto:sample@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> info@example.com</a></li>
+					<li><a href="mailto:sample@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Eventplanner@example.com</a></li>
 					<li>|</li>
 					<li><a class="scroll" href="#contact">Contact</a></li>
 				</ul>
@@ -51,7 +51,7 @@ SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 	<!-- //header -->
 	<!-- navigation -->
 	<div class="navigation">
-		<div class="container">
+		<%--<div class="container">--%>
 			<div class="agileits-logo">
 				<h1><a href="index.html"><span>Event</span>Planner</a></h1> 
 			</div>
@@ -69,11 +69,13 @@ SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
                         <%--<li class="hvr-bounce-to-bottom button"><a href="Home.aspx" class="scroll">Home</a></li>--%>
-						<li class="hvr-bounce-to-bottom button"><a href="#about" class="scroll">About<span class="sr-only">(current)</span></a></li>
-						<li class="hvr-bounce-to-bottom button"><a href="#gallery" class="scroll">Gallery</a></li>
-						<%--<li class="hvr-bounce-to-bottom button"><a href="#services" class="scroll">Services</a></li>--%>
-                         <li><a href="Login.aspx">Login</a></li>
-                         <li><a href="Registration.aspx">Registration</a></li>	
+						<li class="hvr-bounce-to-bottom button"><a href="#about" class="scroll" style="text-decoration: none; font-family: Algerian;">About<span class="sr-only">(current)</span></a></li>
+						<li class="hvr-bounce-to-bottom button"><a href="#gallery" class="scroll" style="text-decoration: none; font-family: Algerian;">Gallery</a></li>
+                        <li class="hvr-bounce-to-bottom button"><a href="Login.aspx" style="text-decoration: none; font-family: Algerian;">Login</a></li>
+                        <li class="hvr-bounce-to-bottom button"><a href="Registration.aspx" style="text-decoration: none; font-family: Algerian;">Register</a></li>
+						<li class="hvr-bounce-to-bottom button"><a href="#services" class="scroll" style="text-decoration: none; font-family: Algerian;">Services</a></li>
+                         <%--<li><a href="Login.aspx">Login</a></li>
+                         <li><a href="Registration.aspx">Registration</a></li>--%>	
                        			
 						
 					</ul>

@@ -87,6 +87,7 @@
                 <asp:Label ID="Label2" runat="server" ForeColor="#0099FF" Text="Name"></asp:Label>
             </td>
             <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtname" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:TextBox ID="txtname" CssClass="form-control" runat="server" Width="260px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
@@ -110,7 +111,9 @@
         <tr>
             <td class="auto-style5">&nbsp;</td>
             <td class="auto-style8">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtemail" ErrorMessage="Please Enter Valid Mail Id" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -119,6 +122,7 @@
                 <asp:Label ID="Label4" runat="server" ForeColor="#0099FF" Text="Contact No"></asp:Label>
             </td>
             <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtcontact" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:TextBox ID="txtcontact" CssClass="form-control" runat="server" Width="262px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
@@ -135,6 +139,7 @@
                 <asp:Label ID="Label5" runat="server" ForeColor="#0099FF" Text="Feedback"></asp:Label>
             </td>
             <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtfeedback" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:TextBox ID="txtfeedback" CssClass="form-control" runat="server" TextMode="MultiLine" Width="261px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>

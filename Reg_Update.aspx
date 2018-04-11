@@ -56,6 +56,7 @@
             </td>
             <td class="auto-style6">
                 <asp:TextBox ID="txtid" CssClass="form-control" placeholder="ID" runat="server" Width="310px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtid" ErrorMessage="Please Enter Your Reg ID" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -87,7 +88,7 @@
                 <asp:Label ID="Label3" runat="server" ForeColor="#0099FF" Text="Address"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtadd" CssClass="form-control" placeholder="Address" runat="server" Width="310px"></asp:TextBox>
+                <asp:TextBox ID="txtadd" CssClass="form-control" placeholder="Address" runat="server" Width="310px" TextMode="MultiLine"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -132,57 +133,53 @@
         <tr>
             <td class="auto-style11">&nbsp;</td>
             <td class="auto-style10">
-                <asp:Label ID="Label6" runat="server" ForeColor="#0099FF" Text="Username"></asp:Label>
-            </td>
-            <td class="auto-style6">
-                <asp:TextBox ID="txtuname" CssClass="form-control" placeholder="Username" runat="server" OnTextChanged="TextBox6_TextChanged" Width="309px"></asp:TextBox>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style11">&nbsp;</td>
-            <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style6">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style11">&nbsp;</td>
-            <td class="auto-style10">
-                <asp:Label ID="Label7" runat="server" ForeColor="#0099FF" Text="Password"></asp:Label>
-            </td>
-            <td class="auto-style6">
-                <asp:TextBox ID="txtpass" CssClass="form-control" placeholder="Password" runat="server" Width="308px"></asp:TextBox>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style11">&nbsp;</td>
-            <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style6">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style11">&nbsp;</td>
-            <td class="auto-style10">
                 &nbsp;</td>
-            <td class="auto-style6">
-                &nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style11">&nbsp;</td>
-            <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style6">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style11">&nbsp;</td>
-            <td class="auto-style10">&nbsp;</td>
             <td class="auto-style6">
                 <asp:Button ID="btnselect" runat="server" ForeColor="#0099FF" OnClick="btnselect_Click" Text="SELECT" />
                 <asp:Button ID="btnupdate" runat="server" ForeColor="#0099FF" OnClick="btnupdate_Click" Text="UPDATE" />
                 <asp:Button ID="btnclear" runat="server" ForeColor="#0099FF" OnClick="btnclear_Click" Text="CLEAR" />
             </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style11">&nbsp;</td>
+            <td class="auto-style10">&nbsp;</td>
+            <td class="auto-style6">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style11">&nbsp;</td>
+            <td class="auto-style10">
+                &nbsp;</td>
+            <td class="auto-style6">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style11">&nbsp;</td>
+            <td class="auto-style10">&nbsp;</td>
+            <td class="auto-style6">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style11">&nbsp;</td>
+            <td class="auto-style10">
+                &nbsp;</td>
+            <td class="auto-style6">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style11">&nbsp;</td>
+            <td class="auto-style10">&nbsp;</td>
+            <td class="auto-style6">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style11">&nbsp;</td>
+            <td class="auto-style10">&nbsp;</td>
+            <td class="auto-style6">
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>

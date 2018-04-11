@@ -53,6 +53,27 @@
                 <asp:TextBox ID="txtBkngID" CssClass="form-control" runat="server" Width="272px"></asp:TextBox>
             </td>
             <td class="auto-style5">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style5">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style4">
+                <asp:Label ID="Label13" runat="server" ForeColor="#0099FF" Text="User Name"></asp:Label>
+            </td>
+            <td class="auto-style3">
+                <asp:TextBox ID="txtuname" runat="server" CssClass="form-control" Width="271px"></asp:TextBox>
+            </td>
+            <td class="auto-style5">
                 <asp:Label ID="Label8" runat="server" ForeColor="#0099FF" style="text-decoration: underline" Text="Equipments"></asp:Label>
             </td>
             <td>&nbsp;</td>
@@ -61,7 +82,9 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style3">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtuname" ErrorMessage="Please Enter This Field" ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
             <td class="auto-style5">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -127,6 +150,7 @@
             </td>
             <td class="auto-style3">
                 <asp:TextBox ID="txtdate" CssClass="form-control" runat="server" TextMode="Date" Width="274px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtdate" ErrorMessage="PLease Enter This Field" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td class="auto-style5">
                 <asp:Label ID="Label9" runat="server" ForeColor="#0099FF" style="text-decoration: underline" Text="Decoration"></asp:Label>
@@ -149,6 +173,7 @@
             </td>
             <td class="auto-style3">
                 <asp:TextBox ID="txtnoguest" CssClass="form-control" runat="server" Width="272px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtnoguest" ErrorMessage="PLease Enter This Field" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td class="auto-style5">
                 <asp:CheckBoxList ID="checkdectn" runat="server" ForeColor="#0099FF" RepeatDirection="Horizontal">

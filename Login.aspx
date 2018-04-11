@@ -56,8 +56,20 @@
         <tr>
             <td class="auto-style97">&nbsp;</td>
             <td class="auto-style98">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style97">&nbsp;</td>
+            <td class="auto-style98">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style97">&nbsp;</td>
+            <td class="auto-style98">&nbsp;</td>
             <td>
-                <asp:Label ID="Label4" runat="server" ForeColor="#0099FF" Text="LOGIN"></asp:Label>
+                <asp:Label ID="Label4" runat="server" ForeColor="#0099FF" Text="LOGIN" style="text-decoration: underline"></asp:Label>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -79,14 +91,16 @@
                 <asp:Label ID="Label2" runat="server" ForeColor="#0099FF" Text="Username"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtuname" runat="server" OnTextChanged="txtuname_TextChanged"></asp:TextBox>
+                <asp:TextBox ID="txtuname" runat="server" CssClass="form-control" OnTextChanged="txtuname_TextChanged" Width="201px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style97">&nbsp;</td>
             <td class="auto-style98">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtuname" ErrorMessage="Please Enter Username" ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -95,14 +109,16 @@
                 <asp:Label ID="Label3" runat="server" ForeColor="#0099FF" Text="Password"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtpass" runat="server" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="txtpass" runat="server" CssClass="form-control" TextMode="Password" Width="203px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style97">&nbsp;</td>
             <td class="auto-style98">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtpass" ErrorMessage="Please Enter Password" ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -122,7 +138,7 @@
         <tr>
             <td class="auto-style97">&nbsp;</td>
             <td class="auto-style98">&nbsp;</td>
-            <td>Not a Registred User??<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Registration.aspx">Register Now</asp:HyperLink>
+            <td style="color: #FF0000">Not a Registred User??<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Registration.aspx">Register Now</asp:HyperLink>
             </td>
             <td>&nbsp;</td>
         </tr>

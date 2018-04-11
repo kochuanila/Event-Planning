@@ -15,6 +15,21 @@
         .auto-style9 {
             width: 302px;
         }
+        .auto-style10 {
+            width: 302px;
+            height: 22px;
+        }
+        .auto-style11 {
+            width: 210px;
+            height: 22px;
+        }
+        .auto-style12 {
+            width: 389px;
+            height: 22px;
+        }
+        .auto-style13 {
+            height: 22px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -45,25 +60,43 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style9">&nbsp;</td>
-            <td class="auto-style7">&nbsp;</td>
-            <td class="auto-style8">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style10"></td>
+            <td class="auto-style11"></td>
+            <td class="auto-style12"></td>
+            <td class="auto-style13"></td>
+        </tr>
+        <tr>
+            <td class="auto-style10">&nbsp;</td>
+            <td class="auto-style11">
+                <asp:Label ID="Label2" runat="server" ForeColor="#0099FF" Text="Booking ID"></asp:Label>
+            </td>
+            <td class="auto-style12">
+                <asp:TextBox ID="txtBkngID" CssClass="form-control" runat="server" ForeColor="#0099FF" Width="322px"></asp:TextBox>
+            </td>
+            <td class="auto-style13">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style10">&nbsp;</td>
+            <td class="auto-style11">&nbsp;</td>
+            <td class="auto-style12">&nbsp;</td>
+            <td class="auto-style13">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style9">&nbsp;</td>
             <td class="auto-style7">
-                <asp:Label ID="Label2" runat="server" ForeColor="#0099FF" Text="Booking ID"></asp:Label>
+                <asp:Label ID="Label14" runat="server" ForeColor="#0099FF" Text="User Name"></asp:Label>
             </td>
             <td class="auto-style8">
-                <asp:Label ID="lblbookid" runat="server" ForeColor="#0099FF"></asp:Label>
+                <asp:TextBox ID="txtuname" runat="server" CssClass="form-control" Width="320px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style9">&nbsp;</td>
             <td class="auto-style7">&nbsp;</td>
-            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style8">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtuname" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -73,6 +106,7 @@
             </td>
             <td class="auto-style8">
                 <asp:TextBox ID="txtdate" CssClass="form-control" runat="server" TextMode="Date" Width="323px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtdate" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -89,6 +123,7 @@
             </td>
             <td class="auto-style8">
                 <asp:TextBox ID="txttime" CssClass="form-control" runat="server" Width="321px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txttime" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -105,6 +140,7 @@
             </td>
             <td class="auto-style8">
                 <asp:TextBox ID="txtreplace" CssClass="form-control" runat="server" Width="322px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtreplace" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -121,6 +157,7 @@
             </td>
             <td class="auto-style8">
                 <asp:TextBox ID="txtretime" CssClass="form-control" runat="server" Width="322px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtretime" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -137,6 +174,7 @@
             </td>
             <td class="auto-style8">
                 <asp:TextBox ID="txtvenue" CssClass="form-control" runat="server" Width="322px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtvenue" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -153,6 +191,8 @@
             </td>
             <td class="auto-style8">
                 <asp:TextBox ID="txtid" CssClass="form-control" runat="server" OnTextChanged="txtid_TextChanged" Width="322px"></asp:TextBox>
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="SEARCH" ForeColor="#0099FF" />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtid" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td>
                 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/View_Photographer.aspx">View Our Photographers</asp:HyperLink>
@@ -251,7 +291,6 @@
             <td class="auto-style7">&nbsp;</td>
             <td class="auto-style8">
                 <asp:Button ID="btnbook" runat="server" OnClick="btnbook_Click" Text="BOOK" ForeColor="#0099FF" />
-                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="SEARCH" ForeColor="#0099FF" />
             </td>
             <td>&nbsp;</td>
         </tr>

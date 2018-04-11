@@ -40,7 +40,7 @@ SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 			</div>
 			<div class="header-w3right">
 				<ul>
-					<li><a href="mailto:sample@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> info@example.com</a></li>
+					<li><a href="mailto:sample@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Eventplanner@example.com</a></li>
 					<li>|</li>
 					<li><a  href="Home.aspx">HOME</a></li>
 				</ul>
@@ -66,10 +66,10 @@ SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 					</button>
 				</div> 
 				<!-- Collect the nav links, forms, and other content for toggling -->
-			<%--	<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						 <li><a href="Reg_Update.aspx">Update Details</a></li>
-                         <li><a href="View_Venue.aspx">View Venue</a></li>
+						 <%--<li><a href="Reg_Update.aspx">Update Details</a></li>
+                         <li><a href="View_Venue.aspx">View Venue</a></li>--%>
 					</ul>
 					<div class="social-icons">
 						<ul>
@@ -78,7 +78,7 @@ SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 							<li><a href="#" class="f3"></a></li>
 							<li><a href="#" class="f4"></a></li>
 						</ul>
-					</div>--%>
+					</div>
 					<div class="clearfix"></div>
 				</div><!-- /.navbar-collapse -->
 			</nav>

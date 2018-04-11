@@ -73,11 +73,13 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style1">
+                &nbsp;</td>
             <td class="auto-style3">
                 <asp:Label ID="Label3" runat="server" ForeColor="#0099FF" Text="Name"></asp:Label>
             </td>
             <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtname" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:TextBox ID="txtname" CssClass="form-control" runat="server" Width="213px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
@@ -89,11 +91,13 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style1">
+                &nbsp;</td>
             <td class="auto-style3">
                 <asp:Label ID="Label4" runat="server" ForeColor="#0099FF" Text="Address"></asp:Label>
             </td>
             <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtaddress" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:TextBox ID="txtaddress" CssClass="form-control" runat="server" Width="213px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
@@ -105,11 +109,13 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style1">
+                &nbsp;</td>
             <td class="auto-style3">
                 <asp:Label ID="Label5" runat="server" ForeColor="#0099FF" Text="Contact"></asp:Label>
             </td>
             <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtcontact" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:TextBox ID="txtcontact" CssClass="form-control" runat="server" Width="214px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
@@ -126,6 +132,7 @@
                 <asp:Label ID="Label6" runat="server" ForeColor="#0099FF" Text="Email"></asp:Label>
             </td>
             <td>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtemail" ErrorMessage="Invalid Email" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 <asp:TextBox ID="txtemail" CssClass="form-control" runat="server" Width="214px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
@@ -137,11 +144,13 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style1">
+                &nbsp;</td>
             <td class="auto-style3">
                 <asp:Label ID="Label7" runat="server" ForeColor="#0099FF" Text="Username"></asp:Label>
             </td>
             <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtuname" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:TextBox ID="txtuname" CssClass="form-control" runat="server" Width="214px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
@@ -153,11 +162,13 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style1">
+                &nbsp;</td>
             <td class="auto-style3">
                 <asp:Label ID="Label8" runat="server" ForeColor="#0099FF" Text="Password"></asp:Label>
             </td>
             <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtpassword" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:TextBox ID="txtpassword" CssClass="form-control" runat="server" TextMode="Password" Width="213px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
@@ -174,6 +185,7 @@
                 <asp:Label ID="Label9" runat="server" ForeColor="#0099FF" Text="Con_password"></asp:Label>
             </td>
             <td>
+                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtpassword" ControlToValidate="txtconpass" ErrorMessage="Invalid Password" ForeColor="Red"></asp:CompareValidator>
                 <asp:TextBox ID="txtconpass" CssClass="form-control" runat="server" TextMode="Password" Width="212px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>

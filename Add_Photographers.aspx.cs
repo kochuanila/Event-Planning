@@ -29,7 +29,7 @@ namespace Event_Planing
         public void grid()
         {
             getcon();
-            string str = "select Pg_id,Name,Age,Gender,Address,Contact_no,Email,Experience,Rate from Add_photographer ";
+            string str = "select Pg_id,Name,Age,Gender,Address,Contact_no,Email,Experience,Rate from Add_photographers ";
             cmd = new SqlCommand(str, con);
             cmd.ExecuteNonQuery();
             SqlDataAdapter adr = new SqlDataAdapter(cmd);
@@ -45,11 +45,11 @@ namespace Event_Planing
         protected void btnadd_Click(object sender, EventArgs e)
         {
             getcon();
-            String ins = "insert into Add_photographer values('" + txtname.Text + "','" + txtage.Text + "','" + RadioButtonList1.SelectedItem.Text + "','" + txtadd.Text + "','" + txtcontact.Text + "','" + txtemail.Text + "','" + txtexp.Text + "','" + txtrate.Text + "')";
+            String ins = "insert into Add_photographers values('" + txtname.Text + "','" + txtage.Text + "','" + RadioButtonList1.SelectedItem.Text + "','" + txtadd.Text + "','" + txtcontact.Text + "','" + txtemail.Text + "','" + txtexp.Text + "','" + txtrate.Text + "')";
             cmd = new SqlCommand(ins, con);
             cmd.ExecuteNonQuery();
             Response.Write("<script>alert('Data Added Successfully! :-)')</script>");
-            String select = "select * from Add_photographer";
+            String select = "select * from Add_photographers";
             cmd = new SqlCommand(select, con);
             cmd.ExecuteNonQuery();
 
@@ -79,7 +79,7 @@ namespace Event_Planing
         {
             getcon();
             String Pg_id = ((Label)GridView1.Rows[e.RowIndex].FindControl("label3")).Text;
-            string del = "delete from Add_photographer where Pg_id=" + Pg_id;
+            string del = "delete from Add_photographers where Pg_id=" + Pg_id;
             SqlCommand cmd = new SqlCommand(del, con);
             cmd.ExecuteNonQuery();
             Response.Write("<script>alert('Data deleted Successfully! :-)')</script>");
@@ -105,7 +105,7 @@ namespace Event_Planing
             String Email = ((TextBox)GridView1.Rows[e.RowIndex].FindControl("TextBox6")).Text;
             String Experience = ((TextBox)GridView1.Rows[e.RowIndex].FindControl("TextBox7")).Text;
             String Rate = ((TextBox)GridView1.Rows[e.RowIndex].FindControl("TextBox8")).Text;
-            String update = "update Add_photographer set Name='" + Name + "', Age='" + Age + "',Gender='" + Gender + "',Address='" + Address + "',Contact_no='" + Contact_no + "',Email='" + Email + "',Experience='" + Experience + "',Rate='" + Rate + "' where Pg_id='" + Pg_id + "'";
+            String update = "update Add_photographers set Name='" + Name + "', Age='" + Age + "',Gender='" + Gender + "',Address='" + Address + "',Contact_no='" + Contact_no + "',Email='" + Email + "',Experience='" + Experience + "',Rate='" + Rate + "' where Pg_id='" + Pg_id + "'";
             SqlCommand cmd = new SqlCommand(update, con);
             cmd.ExecuteNonQuery();
             Response.Write("<script>alert('Data Updated Successfully! :-)')</script>");

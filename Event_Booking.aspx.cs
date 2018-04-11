@@ -12,7 +12,7 @@ namespace Event_Planing
     public partial class Event_Booking : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection();
-        String ID = "";
+        String ID = "EV986200";
         DBManager db = new DBManager();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,7 +20,7 @@ namespace Event_Planing
             {
                 GenerateAutoID();
                 getcon();
-                string com = "select Name from Add_Venue";
+                string com = "select Name from Add_Venues";
                 SqlDataAdapter adpt = new SqlDataAdapter(com, con);
                 DataTable dt=new DataTable();
                 adpt.Fill(dt);
@@ -69,7 +69,7 @@ namespace Event_Planing
             //getcon();
             DBManager db = new DBManager();
             DataTable dt = new DataTable();
-            string str = "select Image from Add_Venue where Name= '" + DropDownList2.SelectedValue.ToString() + "'";
+            string str = "select Image from Add_Venues where Name= '" + DropDownList2.SelectedValue.ToString() + "'";
            //SqlCommand cmd = new SqlCommand(str, con);
            //SqlDataAdapter adr = new SqlDataAdapter(cmd);
            //DataTable dt = new DataTable();
@@ -168,18 +168,20 @@ namespace Event_Planing
         protected void btnbook_Click(object sender, EventArgs e)
         {
             getcon();
-            String ins = "insert into Book_Events values('" + txtBkngID.Text + "','" + txtbookdate.Text + "','" + DropDownList1.SelectedValue.ToString() + "','" + txtdate.Text + "','" + txtnoguest.Text + "','" + DropDownList2.SelectedValue.ToString() + "','" + checkequi.SelectedItem.ToString() + "','" + lblequicost.Text + "','" + checkdectn.SelectedItem.ToString() + "','" + lbldectncost.Text + "','" + checkfood.SelectedItem.ToString() + "','" + lblfoodcost.Text + "','" + txttotamunt.Text + "','" + txtpaynow.Text + "')";
+            String ins = "insert into Book_Events values('" + txtBkngID.Text + "','"+txtuname.Text+"','" + txtbookdate.Text + "','" + DropDownList1.SelectedValue.ToString() + "','" + txtdate.Text + "','" + txtnoguest.Text + "','" + DropDownList2.SelectedValue.ToString() + "','" + checkequi.SelectedItem.ToString() + "','" + lblequicost.Text + "','" + checkdectn.SelectedItem.ToString() + "','" + lbldectncost.Text + "','" + checkfood.SelectedItem.ToString() + "','" + lblfoodcost.Text + "','" + txttotamunt.Text + "','" + txtpaynow.Text + "')";
             SqlCommand cmd = new SqlCommand(ins, con);
             cmd.ExecuteNonQuery();
             con.Close();
             Session["Amount"] = txtpaynow.Text;
             Session["BkngNo"] = txtBkngID.Text;
-
+            Session["UserName"] = txtuname.Text;
+            Response.Redirect("Payment.aspx");
             txtBkngID.Text = "";
             txtbookdate.Text = "";
             txtnoguest.Text = "";
             txtdate.Text = "";
             txttotamunt.Text = "";
+            txtuname.Text = "";
             txtpaynow.Text = "";
             lblequicost.Text = "";
             lbldectncost.Text = "";

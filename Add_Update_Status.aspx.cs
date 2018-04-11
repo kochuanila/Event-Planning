@@ -14,15 +14,25 @@ namespace Event_Planing
         SqlConnection con = new SqlConnection();
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            getcon();    
+            string com = "select Book_ID from Book_Events";
+            SqlDataAdapter adpt = new SqlDataAdapter(com, con);
+            DataTable dt = new DataTable();
+            adpt.Fill(dt);
+            DropDownList2.DataSource = dt;
+            DropDownList2.DataTextField = "Book_ID";
+            DropDownList2.DataBind();
+            con.Close();
+        }
+        public void getcon()
+        {
             con.ConnectionString = @"Data Source=LAPTOP-4H9G3A49\SQLEXPRESS;Initial Catalog=anu;Integrated Security=True";
             con.Open();
-        
         }
-
         protected void btnsearch_Click(object sender, EventArgs e)
         {
-            String sel = "select Event_place,No_of_guest,Date,Total_amount,Amount_Pay,Event_place from Book_Events where Book_ID='" + txtbookid.Text + "'";
+            getcon();
+            String sel = "select Event_place,No_of_guest,Date,Total_amount,Amount_Pay,Event_place from Book_Events where Book_ID='" + DropDownList2.SelectedItem.Text + "'";
             SqlCommand cmd = new SqlCommand(sel, con);
             SqlDataAdapter sd1 = new SqlDataAdapter(cmd);
             DataTable dt1 = new DataTable();
@@ -35,35 +45,55 @@ namespace Event_Planing
                 txttotamunt.Text = dt1.Rows[0][3].ToString();
                 txtpaynow.Text = dt1.Rows[0][4].ToString();
             }
+             
             else
             {
                 Response.Write("<script>alert('Invalid ID! :-)')</script>");
 
             }
+            con.Close();
         }
 
         protected void btnaddstatus_Click(object sender, EventArgs e)
         {
-            String ins = "insert into Add_Status values('" + txtbookid.Text + "','" + DropDownList1.SelectedItem.ToString() + "')";
-            SqlCommand cmd1 = new SqlCommand(ins, con);
-            cmd1.ExecuteNonQuery();
-            Response.Write("<script>alert('Details Added Successfully! :-)')</script>");
+            
+                getcon();
+                String select="select 1 from Add_Status where Booking_ID = '"+DropDownList2.SelectedItem.Text+"'";
+                SqlCommand cmd = new SqlCommand(select, con);                
+                SqlDataAdapter sd1 = new SqlDataAdapter(cmd);
+                DataTable dt1 = new DataTable();
+                sd1.Fill(dt1);
+                if (dt1.Rows.Count > 0)
+                {
+                    Response.Write("<script>alert('Already Added ! :-)')</script>");
+                }
+                else
+                {
+                    
+                    String ins = "insert into Add_Status values('" + DropDownList2.SelectedItem.ToString() + "','" + DropDownList1.SelectedItem.ToString() + "')";
+                    SqlCommand cmd1 = new SqlCommand(ins, con);
+                    cmd1.ExecuteNonQuery();
+                    Response.Write("<script>alert('Details Added Successfully! :-)')</script>");
+                }
 
+                con.Close();
             
         }
 
         protected void btnupdate_Click(object sender, EventArgs e)
         {
-            String update = "update Add_Status set  Status='" + DropDownList1.SelectedItem.ToString() + "' where Booking_ID='"+txtbookid.Text+"'" ;
+            getcon();
+            String update = "update Add_Status set  Status='" + DropDownList1.SelectedItem.ToString() + "' where Booking_ID='" + DropDownList2.SelectedItem.Text + "'";
             SqlCommand cmd = new SqlCommand(update, con);
             cmd.ExecuteNonQuery();
+            con.Close(); 
             Response.Write("<script>alert('Details Updated Successfully! :-)')</script>");
 
         }
 
         protected void btnclear_Click(object sender, EventArgs e)
         {
-            txtbookid.Text = "";
+            
             txtevplace.Text = "";
             txtguest.Text = "";
             txtevdate.Text = "";

@@ -36,13 +36,13 @@ namespace Event_Planing
             if (dt.Rows.Count > 0)
             {
 
-                Response.Redirect("Reg_Update.aspx");
+                Response.Redirect("User_Home.aspx");
 
 
             }
             else if (txtuname.Text == "admin" && txtpass.Text == "admin")
             {
-                Response.Redirect("View_Registration.aspx");
+                Response.Redirect("Admin_Home.aspx");
             }
 
             else

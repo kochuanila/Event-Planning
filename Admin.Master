@@ -40,7 +40,7 @@ SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 			</div>
 			<div class="header-w3right">
 				<ul>
-					<li><a href="mailto:sample@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> info@example.com</a></li>
+					<li><a href="mailto:sample@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Eventplanner@example.com</a></li>
 					<li>|</li>
 					<li><a href="Home.aspx">Home</a></li>
 				</ul>
@@ -51,7 +51,7 @@ SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 	<!-- //header -->
 	<!-- navigation -->
 	<div class="navigation">
-		<div class="container">
+		<%--<div class="container">--%>
 			<div class="agileits-logo">
 				<h1><a href="index.html"><span>Event</span>Planner</a></h1> 
                 
@@ -66,20 +66,7 @@ SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 						<span class="icon-bar"></span>
 					</button>
 				</div> 
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						
-                        <li><a href="View_Registration.aspx">View Registration</a></li>	
-                        <li><a href="Add_Venue.aspx">Add Venue</a></li>	
-                         <li><a href="Add_Bus_Details.aspx">Add Bus</a></li>
-                        <li><a href="Add_Car_Details.aspx">Add Car</a></li>
-                      <br />
-                       <li><a href="Add_Photographers.aspx">Add PhotoGrapher</a></li>	
-                       			
-                       			
-					</ul>
-					<div class="social-icons">
+                <div class="social-icons">
 						<ul>
 							<li><a href="#" class="f1"></a></li>
 							<li><a href="#" class="f2"></a></li>
@@ -87,11 +74,32 @@ SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 							<li><a href="#" class="f4"></a></li>
 						</ul>
 					</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						
+                        <li class="hvr-bounce-to-bottom button"><a href="View_Registration.aspx" style="text-decoration: none">Registrations</a></li>	
+                        <li class="hvr-bounce-to-bottom button"><a href="Add_Venue.aspx" style="text-decoration: none">Add Venue</a></li>	
+                        <li class="hvr-bounce-to-bottom button"><a href="Add_Update_Status.aspx" style="text-decoration: none">Event Status</a></li>
+                        <li class="hvr-bounce-to-bottom button"><a href="View_Booked_Photographers.aspx" style="text-decoration: none">Photographers</a></li>
+                        <li class="hvr-bounce-to-bottom button"><a href="View_Booked_vehicles.aspx" style="text-decoration: none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transportations</a></li>
+                        <li class="hvr-bounce-to-bottom button"><a href="View_BookEvent_Details.aspx" style="text-decoration: none">Events</a></li>
+                        <li class="hvr-bounce-to-bottom button"><a href="View_Cancel_Booking.aspx" style="text-decoration: none">Canceled Events</a></li>
+                        <li class="hvr-bounce-to-bottom button"><a href="Feedback_View.aspx" style="text-decoration: none">Feedbacks</a></li>
+                        <li class="hvr-bounce-to-bottom button"><a href="Add_Vehicle.aspx" style="text-decoration: none">Add Vehicle</a></li>
+                        <li class="hvr-bounce-to-bottom button"><a href="Notification.aspx" style="text-decoration: none">Notification</a></li>
+                        <li class="hvr-bounce-to-bottom button"><a href="Add_Photographers.aspx" style="text-decoration: none">Add PhotoGrapher</a></li>
+                        <li class="hvr-bounce-to-bottom button"><a href="Payment_View.aspx" style="text-decoration: none">payments</a></li>
+                        <li class="hvr-bounce-to-bottom button"><a href="Home.aspx" style="text-decoration: none">Logout</a></li>	                      			                       			
+					</ul>
+					
 					<div class="clearfix"></div>
+                    
 				</div><!-- /.navbar-collapse -->
 			</nav>
 		</div>
-	</div>
+	<%--</div>--%>
 	<!-- //navigation -->
 	<!-- banner -->
 	<%--<div class="banner">--%>
@@ -139,7 +147,7 @@ SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, Son
 				</ul>
 			</div>
 		</div>
-	</div>
+	<%--</div>--%>
 	<!-- //banner -->
     <form id="form1" runat="server">
     <div>

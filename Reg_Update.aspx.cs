@@ -23,7 +23,7 @@ namespace Event_Planing
         }
         protected void btnselect_Click(object sender, EventArgs e)
         {
-            String sel = "select Name,Address,Contact_no,Email,Username,Password from Registration where id='" + txtid.Text + "'";
+            String sel = "select Name,Address,Contact_no,Email from Registration where id='" + txtid.Text + "'";
             SqlCommand cmd = new SqlCommand(sel, con);
             SqlDataAdapter sd = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -34,8 +34,8 @@ namespace Event_Planing
                 txtadd.Text = dt.Rows[0][1].ToString();
                 txtcontact.Text = dt.Rows[0][2].ToString();
                 txtemail.Text = dt.Rows[0][3].ToString();
-                txtuname.Text = dt.Rows[0][4].ToString();
-                txtpass.Text = dt.Rows[0][5].ToString();
+                //txtuname.Text = dt.Rows[0][4].ToString();
+                //txtpass.Text = dt.Rows[0][5].ToString();
                 
             }
             else
@@ -47,7 +47,7 @@ namespace Event_Planing
 
         protected void btnupdate_Click(object sender, EventArgs e)
         {
-            String update = "update Registration set  Name='" + txtname.Text + "',Address='" + txtadd.Text + "',Contact_no='" + txtcontact.Text + "',Email='" + txtemail.Text + "',Username='" + txtuname.Text + "',Password='" + txtpass.Text + "' where id='" + txtid.Text + "'";
+            String update = "update Registration set  Name='" + txtname.Text + "',Address='" + txtadd.Text + "',Contact_no='" + txtcontact.Text + "',Email='" + txtemail.Text + "' where id='" + txtid.Text + "'";
             SqlCommand cmd = new SqlCommand(update, con);
             cmd.ExecuteNonQuery();
             Response.Write("<script>alert('Details Updated Successfully! :-)')</script>");
@@ -69,8 +69,8 @@ namespace Event_Planing
             txtadd.Text = "";
             txtcontact.Text = "";
             txtemail.Text = "";
-            txtuname.Text = "";
-            txtpass.Text = "";
+            //txtuname.Text = "";
+            //txtpass.Text = "";
             
         }
     }

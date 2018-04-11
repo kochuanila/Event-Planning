@@ -12,7 +12,7 @@ namespace Event_Planing
     public partial class Registration : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection();
-        String ID = "Reg";
+        String ID = "Reg1002130";
         protected void Page_Load(object sender, EventArgs e)
         {
 

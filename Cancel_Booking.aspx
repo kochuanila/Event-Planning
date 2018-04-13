@@ -85,27 +85,11 @@
             <td class="auto-style2">
                 &nbsp;</td>
             <td class="auto-style3">
-                <asp:Label ID="Label3" runat="server" ForeColor="#0099FF" Text="Enter your Booking ID"></asp:Label>
+                <asp:Label ID="Label5" runat="server" ForeColor="#0099FF" Text="Reg ID"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtBkngID" CssClass="form-control" runat="server" Width="321px"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtBkngID" ErrorMessage="Please Enter Your ID " ForeColor="Red"></asp:RequiredFieldValidator>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>
-                <asp:Button ID="btnviewdetails" runat="server" ForeColor="#0099FF" OnClick="btnviewdetails_Click" Text="View Details" />
+                <asp:TextBox ID="txtregid" runat="server" CssClass="form-control" Width="323px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtregid" ErrorMessage="Please Enter Your ID " ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -119,25 +103,10 @@
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+            <td class="auto-style3">
+                &nbsp;</td>
             <td>
-                <asp:Label ID="lblbooingdate" runat="server" ForeColor="#0099FF">Booking date</asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="lblevdate" runat="server" ForeColor="#0099FF">Event date</asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="lbltotamunt" runat="server" ForeColor="#0099FF">Amount</asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="lblpaynow" runat="server" ForeColor="#0099FF">Pay Now</asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="lblevplace" runat="server" ForeColor="#0099FF">Event place</asp:Label>
-&nbsp;&nbsp; </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td>&nbsp;</td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -146,6 +115,34 @@
             <td class="auto-style3">&nbsp;</td>
             <td>
                 <asp:Button ID="btncancelbooking" runat="server" ForeColor="#0099FF" OnClick="btncancelbooking_Click" Text="CANCEL BOOKING" />
+                </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+            <td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp; </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </td>
             <td>&nbsp;</td>
         </tr>

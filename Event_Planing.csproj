@@ -66,7 +66,6 @@
     <Content Include="Add_Venue.aspx" />
     <Content Include="Admin_Home.aspx" />
     <Content Include="Book_Photographer.aspx" />
-    <Content Include="Book_Transportation.aspx" />
     <Content Include="Book_Vehicle.aspx" />
     <Content Include="Cancel_Booking.aspx" />
     <Content Include="Event_Booking.aspx" />
@@ -83,13 +82,25 @@
     <Content Include="Registration.aspx" />
     <Content Include="Reg_Update.aspx" />
     <Content Include="Report1.aspx" />
-    <Content Include="ReportEvent.aspx" />
-    <Content Include="Trans_Book.aspx" />
+    <Content Include="Report2.aspx" />
+    <Content Include="Report3.aspx" />
+    <Content Include="Report3booking.aspx" />
     <Content Include="User.Master" />
     <Content Include="Main.Master" />
     <Content Include="Login.Master" />
     <Content Include="Dataeventbooking.xsc">
       <DependentUpon>Dataeventbooking.xsd</DependentUpon>
+    </Content>
+    <Content Include="Databookingdetails.xsc">
+      <DependentUpon>Databookingdetails.xsd</DependentUpon>
+    </Content>
+    <None Include="Databookingdetails.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Databookingdetails.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Databookingdetails.xss">
+      <DependentUpon>Databookingdetails.xsd</DependentUpon>
     </Content>
     <None Include="Dataeventbooking.xsd">
       <SubType>Designer</SubType>
@@ -98,6 +109,28 @@
     </None>
     <Content Include="Dataeventbooking.xss">
       <DependentUpon>Dataeventbooking.xsd</DependentUpon>
+    </Content>
+    <Content Include="Datapayments.xsc">
+      <DependentUpon>Datapayments.xsd</DependentUpon>
+    </Content>
+    <None Include="Datapayments.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Datapayments.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Datapayments.xss">
+      <DependentUpon>Datapayments.xsd</DependentUpon>
+    </Content>
+    <Content Include="Datauserdetails.xsc">
+      <DependentUpon>Datauserdetails.xsd</DependentUpon>
+    </Content>
+    <None Include="Datauserdetails.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Datauserdetails.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Datauserdetails.xss">
+      <DependentUpon>Datauserdetails.xsd</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -142,11 +175,12 @@
     <Content Include="View_Booked_Photographers.aspx" />
     <Content Include="View_Booked_vehicles.aspx" />
     <Content Include="View_BookEvent_Details.aspx" />
+    <Content Include="View_Bookings.aspx" />
     <Content Include="View_Cancel_Booking.aspx" />
     <Content Include="View_Photographer.aspx" />
     <Content Include="View_Registration.aspx" />
     <Content Include="View_Status.aspx" />
-    <Content Include="View_Venue.aspx" />
+    <Content Include="View_Venues.aspx" />
     <Content Include="w3layouts-License.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -214,13 +248,6 @@
     <Compile Include="Book_Photographer.aspx.designer.cs">
       <DependentUpon>Book_Photographer.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Book_Transportation.aspx.cs">
-      <DependentUpon>Book_Transportation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Book_Transportation.aspx.designer.cs">
-      <DependentUpon>Book_Transportation.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Book_Vehicle.aspx.cs">
       <DependentUpon>Book_Vehicle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -235,10 +262,25 @@
     <Compile Include="Cancel_Booking.aspx.designer.cs">
       <DependentUpon>Cancel_Booking.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Databookingdetails.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Databookingdetails.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataeventbooking.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Dataeventbooking.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datapayments.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datapayments.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datauserdetails.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datauserdetails.xsd</DependentUpon>
     </Compile>
     <Compile Include="DBManager.cs" />
     <Compile Include="Event_Booking.aspx.cs">
@@ -333,19 +375,23 @@
     <Compile Include="Report1.aspx.designer.cs">
       <DependentUpon>Report1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ReportEvent.aspx.cs">
-      <DependentUpon>ReportEvent.aspx</DependentUpon>
+    <Compile Include="Report2.aspx.cs">
+      <DependentUpon>Report2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ReportEvent.aspx.designer.cs">
-      <DependentUpon>ReportEvent.aspx</DependentUpon>
+    <Compile Include="Report2.aspx.designer.cs">
+      <DependentUpon>Report2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Trans_Book.aspx.cs">
-      <DependentUpon>Trans_Book.aspx</DependentUpon>
+    <Compile Include="Report3.aspx.cs">
+      <DependentUpon>Report3.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Trans_Book.aspx.designer.cs">
-      <DependentUpon>Trans_Book.aspx</DependentUpon>
+    <Compile Include="Report3.aspx.designer.cs">
+      <DependentUpon>Report3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report3booking.aspx.cs">
+      <DependentUpon>Report3booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User.Master.cs">
       <DependentUpon>User.Master</DependentUpon>
@@ -382,6 +428,13 @@
     <Compile Include="View_BookEvent_Details.aspx.designer.cs">
       <DependentUpon>View_BookEvent_Details.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View_Bookings.aspx.cs">
+      <DependentUpon>View_Bookings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View_Bookings.aspx.designer.cs">
+      <DependentUpon>View_Bookings.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View_Cancel_Booking.aspx.cs">
       <DependentUpon>View_Cancel_Booking.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -410,19 +463,22 @@
     <Compile Include="View_Status.aspx.designer.cs">
       <DependentUpon>View_Status.aspx</DependentUpon>
     </Compile>
-    <Compile Include="View_Venue.aspx.cs">
-      <DependentUpon>View_Venue.aspx</DependentUpon>
+    <Compile Include="View_Venues.aspx.cs">
+      <DependentUpon>View_Venues.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View_Venue.aspx.designer.cs">
-      <DependentUpon>View_Venue.aspx</DependentUpon>
+    <Compile Include="View_Venues.aspx.designer.cs">
+      <DependentUpon>View_Venues.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="paymentdetails.rdlc" />
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="userdetails.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

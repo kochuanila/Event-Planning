@@ -37,10 +37,20 @@ namespace Event_Planing
         }
         private void GenerateAutoID()
         {
+            //getcon();
+            //string str = "select Count(Bkng_ID) from Book_Vehicles";
+            //SqlCommand cmd = new SqlCommand(str, con);
+            //int i = Convert.ToInt32(cmd.ExecuteScalar());
+            //con.Close();
+            //i++;
+            //txtBkngID.Text = ID + i.ToString();
             getcon();
-            string str = "select Count(Bkng_ID) from Book_Vehicles";
+            string str = "select Bkng_ID, SUBSTRING(Bkng_ID,LEN(Bkng_ID),1) from Book_Vehicles";
             SqlCommand cmd = new SqlCommand(str, con);
-            int i = Convert.ToInt32(cmd.ExecuteScalar());
+            SqlDataAdapter adr = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adr.Fill(dt);
+            int i = Convert.ToInt32(dt.Rows[0][0].ToString());
             con.Close();
             i++;
             txtBkngID.Text = ID + i.ToString();
@@ -77,13 +87,14 @@ namespace Event_Planing
         protected void btnbook_Click(object sender, EventArgs e)
         {
             getcon();
-            String ins = "insert into Book_Vehicles values('"+txtBkngID.Text+"','" + txtuname.Text + "','" + txtreplace.Text + "','" + txtretime.Text + "','" + txtevdate.Text + "','" + txtvenue.Text + "','" + RadioButtonList1.SelectedValue.ToString() + "','" + DropDownList1.SelectedValue.ToString() + "','" + txttotamunt.Text + "','" + txtpaynow.Text + "')";
+            String ins = "insert into Book_Vehicles values('"+txtBkngID.Text+"','" + txtuname.Text + "','"+txtregid.Text+"','" + txtreplace.Text + "','" + txtretime.Text + "','" + txtevdate.Text + "','" + txtvenue.Text + "','" + RadioButtonList1.SelectedValue.ToString() + "','" + DropDownList1.SelectedValue.ToString() + "','" + txttotamunt.Text + "','" + txtpaynow.Text + "')";
             SqlCommand cmd = new SqlCommand(ins, con);
             cmd.ExecuteNonQuery();
             con.Close();
             Session["Amount"] = txtpaynow.Text;
             Session["BkngNo"] = txtBkngID.Text;
             Session["UserName"] = txtuname.Text;
+            Session["RegID"] = txtregid.Text;
             Response.Redirect("Payment.aspx");
             txtreplace.Text = "";
             txtretime.Text = "";
@@ -92,6 +103,23 @@ namespace Event_Planing
             txttotamunt.Text = "";
             txtpaynow.Text = "";
             txtuname.Text = "";
+            txtregid.Text = "";
+        }
+
+        protected void txtregid_TextChanged(object sender, EventArgs e)
+        {
+            getcon();
+            String sel1 = "select id from Registration where Username='" + txtuname.Text.ToString() + "'";
+            SqlCommand cmd1 = new SqlCommand(sel1, con);
+            SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
+            DataTable dt1 = new DataTable();
+            sd1.Fill(dt1);
+            if (dt1.Rows.Count > 0)
+            {
+                txtregid.Text = dt1.Rows[0][0].ToString();
+                
+            }
+            con.Close();
         }
     }
 }

@@ -31,27 +31,7 @@ namespace Event_Planing
         }
         protected void btnsearch_Click(object sender, EventArgs e)
         {
-            getcon();
-            String sel = "select Event_place,No_of_guest,Date,Total_amount,Amount_Pay,Event_place from Book_Events where Book_ID='" + DropDownList2.SelectedItem.Text + "'";
-            SqlCommand cmd = new SqlCommand(sel, con);
-            SqlDataAdapter sd1 = new SqlDataAdapter(cmd);
-            DataTable dt1 = new DataTable();
-            sd1.Fill(dt1);
-            if (dt1.Rows.Count > 0)
-            {
-                txtevplace.Text = dt1.Rows[0][0].ToString();
-                txtguest.Text = dt1.Rows[0][1].ToString();
-                txtevdate.Text = dt1.Rows[0][2].ToString();
-                txttotamunt.Text = dt1.Rows[0][3].ToString();
-                txtpaynow.Text = dt1.Rows[0][4].ToString();
-            }
-             
-            else
-            {
-                Response.Write("<script>alert('Invalid ID! :-)')</script>");
-
-            }
-            con.Close();
+            
         }
 
         protected void btnaddstatus_Click(object sender, EventArgs e)
@@ -99,6 +79,31 @@ namespace Event_Planing
             txtevdate.Text = "";
             txttotamunt.Text = "";
             txtpaynow.Text = "";
+        }
+
+        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            getcon();
+            String sel = "select Event_place,No_of_guest,Date,Total_amount,Amount_Pay,Event_place from Book_Events where Book_ID='" + DropDownList2.SelectedItem.Text + "'";
+            SqlCommand cmd = new SqlCommand(sel, con);
+            SqlDataAdapter sd1 = new SqlDataAdapter(cmd);
+            DataTable dt1 = new DataTable();
+            sd1.Fill(dt1);
+            if (dt1.Rows.Count > 0)
+            {
+                txtevplace.Text = dt1.Rows[0][0].ToString();
+                txtguest.Text = dt1.Rows[0][1].ToString();
+                txtevdate.Text = dt1.Rows[0][2].ToString();
+                txttotamunt.Text = dt1.Rows[0][3].ToString();
+                txtpaynow.Text = dt1.Rows[0][4].ToString();
+            }
+
+            else
+            {
+                Response.Write("<script>alert('Invalid ID! :-)')</script>");
+
+            }
+            con.Close();
         }
     }
 }

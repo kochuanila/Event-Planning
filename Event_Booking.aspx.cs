@@ -52,34 +52,27 @@ namespace Event_Planing
 
         }
         private void GenerateAutoID()
-        {
-
-            //getcon();
-            DBManager db = new DBManager();
-            string str = "select Count(Book_ID) from Book_Events";
-            //SqlCommand cmd = new SqlCommand(str, con);
-            int i = Convert.ToInt32(db.ExecScaler(str));
-            //con.Close();
+        {  
+            //string str = "select Count(Book_ID) from Book_Events";           
+            //object a;
+            //txtBkngID.Text = dt.Rows[0][0].ToString();
+            // a = (db.ExecScaler(str));
+            getcon();
+            DBManager db = new DBManager();           
+            string str="select SUBSTRING(Book_ID,LEN(Book_ID),1) from Book_Events";
+            SqlCommand cmd = new SqlCommand(str, con);
+            SqlDataAdapter adr = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adr.Fill(dt);          
+            int i = Convert.ToInt32(dt.Rows[0][0].ToString());
+            con.Close();
             i++;
             txtBkngID.Text = ID + i.ToString();
         }
 
         protected void btnsearch_Click(object sender, EventArgs e)
         {
-            //getcon();
-            DBManager db = new DBManager();
-            DataTable dt = new DataTable();
-            string str = "select Image from Add_Venues where Name= '" + DropDownList2.SelectedValue.ToString() + "'";
-           //SqlCommand cmd = new SqlCommand(str, con);
-           //SqlDataAdapter adr = new SqlDataAdapter(cmd);
-           //DataTable dt = new DataTable();
-            //adr.Fill(dt);
-            dt = db.GetDataTableInline(str);
-            if (dt.Rows.Count > 0)
-            {
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
-            }
+            
         }
 
         protected void btncalculate_Click(object sender, EventArgs e)
@@ -168,15 +161,17 @@ namespace Event_Planing
         protected void btnbook_Click(object sender, EventArgs e)
         {
             getcon();
-            String ins = "insert into Book_Events values('" + txtBkngID.Text + "','"+txtuname.Text+"','" + txtbookdate.Text + "','" + DropDownList1.SelectedValue.ToString() + "','" + txtdate.Text + "','" + txtnoguest.Text + "','" + DropDownList2.SelectedValue.ToString() + "','" + checkequi.SelectedItem.ToString() + "','" + lblequicost.Text + "','" + checkdectn.SelectedItem.ToString() + "','" + lbldectncost.Text + "','" + checkfood.SelectedItem.ToString() + "','" + lblfoodcost.Text + "','" + txttotamunt.Text + "','" + txtpaynow.Text + "')";
+            String ins = "insert into Book_Events values('" + txtBkngID.Text + "','"+txtuname.Text+"','"+txtregid.Text+"','" + txtbookdate.Text + "','" + DropDownList1.SelectedValue.ToString() + "','" + txtdate.Text + "','" + txtnoguest.Text + "','" + DropDownList2.SelectedValue.ToString() + "','" + checkequi.SelectedItem.ToString() + "','" + lblequicost.Text + "','" + checkdectn.SelectedItem.ToString() + "','" + lbldectncost.Text + "','" + checkfood.SelectedItem.ToString() + "','" + lblfoodcost.Text + "','" + txttotamunt.Text + "','" + txtpaynow.Text + "')";
             SqlCommand cmd = new SqlCommand(ins, con);
-            cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery(); 
             con.Close();
             Session["Amount"] = txtpaynow.Text;
             Session["BkngNo"] = txtBkngID.Text;
             Session["UserName"] = txtuname.Text;
+            Session["RegID"] = txtregid.Text;
             Response.Redirect("Payment.aspx");
             txtBkngID.Text = "";
+            txtregid.Text = "";
             txtbookdate.Text = "";
             txtnoguest.Text = "";
             txtdate.Text = "";
@@ -186,6 +181,40 @@ namespace Event_Planing
             lblequicost.Text = "";
             lbldectncost.Text = "";
             lblfoodcost.Text = "";
+        }
+
+        protected void txtregid_TextChanged(object sender, EventArgs e)
+        {
+            getcon();
+            String sel1 = "select id from Registration where Username='" + txtuname.Text.ToString() + "'";
+            SqlCommand cmd1 = new SqlCommand(sel1, con);
+            SqlDataAdapter sd1 = new SqlDataAdapter(cmd1);
+            DataTable dt1 = new DataTable();
+            sd1.Fill(dt1);
+            if (dt1.Rows.Count > 0)
+            {
+                txtregid.Text = dt1.Rows[0][0].ToString();
+                
+            }
+            con.Close();
+        }
+
+        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //getcon();
+            DBManager db = new DBManager();
+            DataTable dt = new DataTable();
+            string str = "select Image from Add_Venues where Name= '" + DropDownList2.SelectedValue.ToString() + "'";
+            //SqlCommand cmd = new SqlCommand(str, con);
+            //SqlDataAdapter adr = new SqlDataAdapter(cmd);
+            //DataTable dt = new DataTable();
+            //adr.Fill(dt);
+            dt = db.GetDataTableInline(str);
+            if (dt.Rows.Count > 0)
+            {
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+            }
         }
     }
 }

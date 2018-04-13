@@ -5,7 +5,7 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 208px;
+            width: 428px;
         }
         .auto-style3 {
             width: 361px;
@@ -14,7 +14,7 @@
             width: 134px;
         }
         .auto-style5 {
-            width: 206px;
+            width: 246px;
         }
     </style>
 </asp:Content>
@@ -24,6 +24,24 @@
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style5">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style5">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label15" runat="server" ForeColor="#0099FF" style="text-decoration: underline" Text="BOOK EVENT"></asp:Label>
+            </td>
             <td class="auto-style5">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -61,7 +79,9 @@
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
+            <td class="auto-style5">
+                <asp:Label ID="Label8" runat="server" ForeColor="#0099FF" style="text-decoration: underline" Text="Equipments"></asp:Label>
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
@@ -71,10 +91,14 @@
                 <asp:Label ID="Label13" runat="server" ForeColor="#0099FF" Text="User Name"></asp:Label>
             </td>
             <td class="auto-style3">
-                <asp:TextBox ID="txtuname" runat="server" CssClass="form-control" Width="271px"></asp:TextBox>
+                <asp:TextBox ID="txtuname" runat="server"  OnTextChanged="txtregid_TextChanged" AutoPostBack="true" CssClass="form-control" Width="271px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtuname" ErrorMessage="Please Enter This Field" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td class="auto-style5">
-                <asp:Label ID="Label8" runat="server" ForeColor="#0099FF" style="text-decoration: underline" Text="Equipments"></asp:Label>
+                <asp:CheckBoxList ID="checkequi" runat="server" ForeColor="#0099FF" RepeatDirection="Horizontal" Height="16px">
+                    <asp:ListItem Value="1">DJ</asp:ListItem>
+                    <asp:ListItem Value="2">Stage</asp:ListItem>
+                </asp:CheckBoxList>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -82,10 +106,36 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style3">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtuname" ErrorMessage="Please Enter This Field" ForeColor="Red"></asp:RequiredFieldValidator>
+            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style5">
+                <asp:Button ID="btnequicost" runat="server" ForeColor="#0099FF" Text="Cost" OnClick="btnequicost_Click" />
             </td>
-            <td class="auto-style5">&nbsp;</td>
+            <td>
+                <asp:Label ID="lblequicost" runat="server" ForeColor="#0099FF"></asp:Label>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style4">
+                <asp:Label ID="Label14" runat="server" ForeColor="#0099FF" Text="Registration No"></asp:Label>
+            </td>
+            <td class="auto-style3">
+                <asp:TextBox ID="txtregid" runat="server" CssClass="form-control" OnTextChanged="txtregid_TextChanged" Width="269px"></asp:TextBox>
+            </td>
+            <td class="auto-style5">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style3">
+                &nbsp;</td>
+            <td class="auto-style5">
+                <asp:Label ID="Label9" runat="server" ForeColor="#0099FF" style="text-decoration: underline" Text="Decoration"></asp:Label>
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
@@ -98,11 +148,7 @@
                 <asp:TextBox ID="txtbookdate" CssClass="form-control" runat="server" Width="271px"></asp:TextBox>
             </td>
             <td class="auto-style5">
-                <asp:CheckBoxList ID="checkequi" runat="server" ForeColor="#0099FF" RepeatDirection="Horizontal">
-                    <asp:ListItem Value="1">DJ</asp:ListItem>
-                    <asp:ListItem Value="2">Stage</asp:ListItem>
-                </asp:CheckBoxList>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
@@ -110,7 +156,12 @@
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
+            <td class="auto-style5">
+                <asp:CheckBoxList ID="checkdectn" runat="server" ForeColor="#0099FF" RepeatDirection="Horizontal">
+                    <asp:ListItem Value="1">Lightings</asp:ListItem>
+                    <asp:ListItem Value="2">Flowers</asp:ListItem>
+                </asp:CheckBoxList>
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
@@ -128,19 +179,21 @@
                 </asp:DropDownList>
             </td>
             <td class="auto-style5">
-                <asp:Button ID="btnequicost" runat="server" ForeColor="#0099FF" Text="Cost" OnClick="btnequicost_Click" />
-            </td>
+                &nbsp;</td>
             <td>
-                <asp:Label ID="lblequicost" runat="server" ForeColor="#0099FF"></asp:Label>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style5">
+                <asp:Button ID="btndectncost" runat="server" ForeColor="#0099FF" Text="Cost" Height="26px" OnClick="btndectncost_Click" />
+            </td>
+            <td>
+                <asp:Label ID="lbldectncost" runat="server" ForeColor="#0099FF"></asp:Label>
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -153,7 +206,7 @@
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtdate" ErrorMessage="PLease Enter This Field" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td class="auto-style5">
-                <asp:Label ID="Label9" runat="server" ForeColor="#0099FF" style="text-decoration: underline" Text="Decoration"></asp:Label>
+                <asp:Label ID="Label10" runat="server" ForeColor="#0099FF" style="text-decoration: underline" Text="Food"></asp:Label>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -175,10 +228,11 @@
                 <asp:TextBox ID="txtnoguest" CssClass="form-control" runat="server" Width="272px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtnoguest" ErrorMessage="PLease Enter This Field" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
-            <td class="auto-style5">
-                <asp:CheckBoxList ID="checkdectn" runat="server" ForeColor="#0099FF" RepeatDirection="Horizontal">
-                    <asp:ListItem Value="1">Lightings</asp:ListItem>
-                    <asp:ListItem Value="2">Flowers</asp:ListItem>
+            <td class="auto-style5" rowspan="2">
+                <asp:CheckBoxList ID="checkfood" runat="server" ForeColor="#0099FF" RepeatDirection="Vertical" OnSelectedIndexChanged="checkfood_SelectedIndexChanged">
+                    <asp:ListItem>Breakfast</asp:ListItem>
+                    <asp:ListItem>Lunch</asp:ListItem>
+                    <asp:ListItem >Dinner</asp:ListItem>
                 </asp:CheckBoxList>
             </td>
             <td>&nbsp;</td>
@@ -188,10 +242,8 @@
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
             <td>
-                <asp:Label ID="lbldectncost" runat="server" ForeColor="#0099FF"></asp:Label>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -200,15 +252,13 @@
                 <asp:Label ID="Label4" runat="server" ForeColor="#0099FF" Text="Event Place"></asp:Label>
             </td>
             <td class="auto-style3">
-                <asp:DropDownList ID="DropDownList2" CssClass="form-control" runat="server" AppendDataBoundItems="true" AutoPostBack="true" Width="267px">
+                <asp:DropDownList ID="DropDownList2" CssClass="form-control" runat="server" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" AppendDataBoundItems="true" AutoPostBack="true" Width="267px" >
                     <asp:ListItem Value="0">--Select--</asp:ListItem>
                     
                 </asp:DropDownList>
-                <asp:Button ID="btnsearch" runat="server" OnClick="btnsearch_Click" Text="Search" />
             </td>
             <td class="auto-style5">
-                <asp:Button ID="btndectncost" runat="server" ForeColor="#0099FF" Text="Cost" Height="24px" OnClick="btndectncost_Click" />
-            </td>
+                &nbsp;</td>
             <td>
                 &nbsp;</td>
             <td>&nbsp;</td>
@@ -217,8 +267,12 @@
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style5">
+                <asp:Button ID="btnfoodcost" runat="server" ForeColor="#0099FF" Text="Cost" OnClick="btnfoodcost_Click" />
+                </td>
+            <td>
+                <asp:Label ID="lblfoodcost" runat="server" ForeColor="#0099FF"></asp:Label>
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -238,22 +292,14 @@
                 </asp:GridView>
             </td>
             <td class="auto-style5">
-                <asp:Label ID="Label10" runat="server" ForeColor="#0099FF" style="text-decoration: underline" Text="Food"></asp:Label>
                 <br />
                 <br />
-                <asp:CheckBoxList ID="checkfood" runat="server" ForeColor="#0099FF" RepeatDirection="Vertical" OnSelectedIndexChanged="checkfood_SelectedIndexChanged">
-                    <asp:ListItem>Breakfast</asp:ListItem>
-                    <asp:ListItem>Lunch</asp:ListItem>
-                    <asp:ListItem >Dinner</asp:ListItem>
-                </asp:CheckBoxList>
                 <br />
-                <asp:Button ID="btnfoodcost" runat="server" ForeColor="#0099FF" Text="Cost" OnClick="btnfoodcost_Click" />
                 <br />
                 <br />
             </td>
             <td>
-                <asp:Label ID="lblfoodcost" runat="server" ForeColor="#0099FF"></asp:Label>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -267,15 +313,7 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Button ID="btncalculate" runat="server" ForeColor="#0099FF" OnClick="btncalculate_Click" Text="Calculate" />
+            <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Button ID="btncalculate" runat="server" ForeColor="#0099FF" OnClick="btncalculate_Click" Text="Calculate" />
             </td>
             <td class="auto-style5">&nbsp;</td>
             <td>&nbsp;</td>
@@ -284,7 +322,7 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
             <td class="auto-style5">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -304,8 +342,10 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
+            <td class="auto-style3">
+                &nbsp;</td>
+            <td class="auto-style5">
+                &nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
@@ -324,7 +364,18 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
+            <td class="auto-style3">
+                &nbsp;</td>
+            <td class="auto-style5">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style4">&nbsp;</td>
+            <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Button ID="btnbook" runat="server" ForeColor="#0099FF" Text="BOOK" OnClick="btnbook_Click" />
+            </td>
             <td class="auto-style5">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -332,8 +383,7 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Button ID="btnbook" runat="server" ForeColor="#0099FF" Text="BOOK" OnClick="btnbook_Click" />
-            </td>
+            <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
             <td class="auto-style5">
                 &nbsp;</td>
             <td>

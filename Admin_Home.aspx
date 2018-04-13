@@ -36,8 +36,7 @@
             <td>&nbsp;</td>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style3">
-                <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="ADMIN PAGE"></asp:Label>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>

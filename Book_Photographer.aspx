@@ -87,7 +87,7 @@
                 <asp:Label ID="Label14" runat="server" ForeColor="#0099FF" Text="User Name"></asp:Label>
             </td>
             <td class="auto-style8">
-                <asp:TextBox ID="txtuname" runat="server" CssClass="form-control" Width="320px"></asp:TextBox>
+                <asp:TextBox ID="txtuname" runat="server" OnTextChanged="txtregid_TextChanged" AutoPostBack="true" CssClass="form-control" Width="320px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -97,6 +97,24 @@
             <td class="auto-style8">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtuname" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style9">&nbsp;</td>
+            <td class="auto-style7">
+                <asp:Label ID="Label15" runat="server" ForeColor="#0099FF" Text="Registration ID"></asp:Label>
+            </td>
+            <td class="auto-style8">
+                <asp:TextBox ID="txtregid" runat="server" CssClass="form-control" Width="321px"></asp:TextBox>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style9">&nbsp;</td>
+            <td class="auto-style7">
+                &nbsp;</td>
+            <td class="auto-style8">
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -190,8 +208,7 @@
                 <asp:Label ID="Label8" runat="server" ForeColor="#0099FF" Text="Enter Photographer ID"></asp:Label>
             </td>
             <td class="auto-style8">
-                <asp:TextBox ID="txtid" CssClass="form-control" runat="server" OnTextChanged="txtid_TextChanged" Width="322px"></asp:TextBox>
-                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="SEARCH" ForeColor="#0099FF" />
+                <asp:TextBox ID="txtid" CssClass="form-control" runat="server" OnTextChanged="txtid_TextChanged" AutoPostBack="true" Width="322px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtid" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td>

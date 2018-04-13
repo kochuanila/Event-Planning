@@ -51,10 +51,9 @@
                 <asp:Label ID="Label1" runat="server" ForeColor="#0099FF" Text="Booking ID"></asp:Label>
             </td>
             <td>
-                <asp:DropDownList ID="DropDownList2" runat="server" AppendDataBoundItems="true" AutoPostBack="true" CssClass="form-control" Width="286px">
+                <asp:DropDownList ID="DropDownList2" runat="server" AppendDataBoundItems="true" AutoPostBack="true" CssClass="form-control" Width="286px" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
                     <asp:ListItem Value="0">--Select--</asp:ListItem>
                 </asp:DropDownList>
-                <asp:Button ID="btnsearch" runat="server" ForeColor="#0099FF" OnClick="btnsearch_Click" Text="Search" /> 
             </td>
             <td>&nbsp;</td>
         </tr>

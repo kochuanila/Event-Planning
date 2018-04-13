@@ -63,7 +63,7 @@
                 <asp:Label ID="Label13" runat="server" ForeColor="#0099FF" Text="User Name "></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtuname" runat="server" CssClass="form-control" Width="313px"></asp:TextBox>
+                <asp:TextBox ID="txtuname" runat="server" OnTextChanged="txtregid_TextChanged" AutoPostBack="true" CssClass="form-control" Width="313px"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -73,6 +73,23 @@
             <td>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtuname" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td>
+                <asp:Label ID="Label14" runat="server" ForeColor="#0099FF" Text="Registration ID"></asp:Label>
+            </td>
+            <td>
+                <asp:TextBox ID="txtregid" runat="server" CssClass="form-control" OnTextChanged="txtregid_TextChanged" Width="312px"></asp:TextBox>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -172,8 +189,8 @@
                 <asp:Label ID="Label9" runat="server" ForeColor="#0099FF" Text="Name Of Vehicle"></asp:Label>
             </td>
             <td>
-                <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="true" CssClass="form-control" Width="318px">
-                    <asp:ListItem Value="0">--Select--</asp:ListItem>
+                <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AppendDataBoundItems="true" AutoPostBack="true" CssClass="form-control" Width="318px">
+                    <asp:ListItem Value="0">--Select--</asp:ListItem>                 
                 </asp:DropDownList>
             </td>
             <td>&nbsp;</td>
